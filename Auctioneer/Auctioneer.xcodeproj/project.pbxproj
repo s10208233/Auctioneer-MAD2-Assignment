@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		629AB1D12789F0A800CFB7B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */; };
+		629AB1D32789F0A800CFB7B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */; };
+		629AB1D52789F0A800CFB7B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D42789F0A800CFB7B0 /* ViewController.swift */; };
+		629AB1D82789F0A800CFB7B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629AB1D62789F0A800CFB7B0 /* Main.storyboard */; };
+		629AB1DB2789F0A800CFB7B0 /* Auctioneer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D92789F0A800CFB7B0 /* Auctioneer.xcdatamodeld */; };
+		629AB1DD2789F0A900CFB7B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629AB1DC2789F0A900CFB7B0 /* Assets.xcassets */; };
+		629AB1E02789F0A900CFB7B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629AB1DE2789F0A900CFB7B0 /* LaunchScreen.storyboard */; };
+		629AB1E82789F2C400CFB7B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 629AB1E72789F2C400CFB7B0 /* GoogleService-Info.plist */; };
+		90DA6D55D83881A1B546BB4F /* Pods_Auctioneer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17A73F031055A5BE54801A73 /* Pods-Auctioneer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.debug.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.debug.xcconfig"; sourceTree = "<group>"; };
+		44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auctioneer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		629AB1CD2789F0A800CFB7B0 /* Auctioneer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auctioneer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		629AB1D42789F0A800CFB7B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		629AB1D72789F0A800CFB7B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		629AB1DA2789F0A800CFB7B0 /* Auctioneer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Auctioneer.xcdatamodel; sourceTree = "<group>"; };
+		629AB1DC2789F0A900CFB7B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		629AB1DF2789F0A900CFB7B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		629AB1E12789F0A900CFB7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		629AB1E72789F2C400CFB7B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CC5901F2445564E20E96F313 /* Pods-Auctioneer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.release.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		629AB1CA2789F0A800CFB7B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90DA6D55D83881A1B546BB4F /* Pods_Auctioneer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A9A979ECDEB69DEAE9AF00E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		629AB1C42789F0A800CFB7B0 = {
+			isa = PBXGroup;
+			children = (
+				629AB1CF2789F0A800CFB7B0 /* Auctioneer */,
+				629AB1CE2789F0A800CFB7B0 /* Products */,
+				8145467C8ABE989D2908B359 /* Pods */,
+				2A9A979ECDEB69DEAE9AF00E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		629AB1CE2789F0A800CFB7B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				629AB1CD2789F0A800CFB7B0 /* Auctioneer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		629AB1CF2789F0A800CFB7B0 /* Auctioneer */ = {
+			isa = PBXGroup;
+			children = (
+				629AB1EA2789F2EE00CFB7B0 /* Controllers */,
+				629AB1E92789F2E800CFB7B0 /* Models */,
+				629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */,
+				629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */,
+				629AB1DE2789F0A900CFB7B0 /* LaunchScreen.storyboard */,
+				629AB1D62789F0A800CFB7B0 /* Main.storyboard */,
+				629AB1D92789F0A800CFB7B0 /* Auctioneer.xcdatamodeld */,
+				629AB1DC2789F0A900CFB7B0 /* Assets.xcassets */,
+				629AB1E12789F0A900CFB7B0 /* Info.plist */,
+				629AB1E72789F2C400CFB7B0 /* GoogleService-Info.plist */,
+			);
+			path = Auctioneer;
+			sourceTree = "<group>";
+		};
+		629AB1E92789F2E800CFB7B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		629AB1EA2789F2EE00CFB7B0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				629AB1D42789F0A800CFB7B0 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8145467C8ABE989D2908B359 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17A73F031055A5BE54801A73 /* Pods-Auctioneer.debug.xcconfig */,
+				CC5901F2445564E20E96F313 /* Pods-Auctioneer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		629AB1CC2789F0A800CFB7B0 /* Auctioneer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 629AB1E42789F0A900CFB7B0 /* Build configuration list for PBXNativeTarget "Auctioneer" */;
+			buildPhases = (
+				12D9C6177FC0E7EE56B6A0F5 /* [CP] Check Pods Manifest.lock */,
+				629AB1C92789F0A800CFB7B0 /* Sources */,
+				629AB1CA2789F0A800CFB7B0 /* Frameworks */,
+				629AB1CB2789F0A800CFB7B0 /* Resources */,
+				C4DC3C8F4E6B711B13198950 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Auctioneer;
+			productName = Auctioneer;
+			productReference = 629AB1CD2789F0A800CFB7B0 /* Auctioneer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		629AB1C52789F0A800CFB7B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					629AB1CC2789F0A800CFB7B0 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 629AB1C82789F0A800CFB7B0 /* Build configuration list for PBXProject "Auctioneer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 629AB1C42789F0A800CFB7B0;
+			productRefGroup = 629AB1CE2789F0A800CFB7B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				629AB1CC2789F0A800CFB7B0 /* Auctioneer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		629AB1CB2789F0A800CFB7B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629AB1E02789F0A900CFB7B0 /* LaunchScreen.storyboard in Resources */,
+				629AB1E82789F2C400CFB7B0 /* GoogleService-Info.plist in Resources */,
+				629AB1DD2789F0A900CFB7B0 /* Assets.xcassets in Resources */,
+				629AB1D82789F0A800CFB7B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12D9C6177FC0E7EE56B6A0F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Auctioneer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4DC3C8F4E6B711B13198950 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Auctioneer/Pods-Auctioneer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Auctioneer/Pods-Auctioneer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Auctioneer/Pods-Auctioneer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		629AB1C92789F0A800CFB7B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629AB1D52789F0A800CFB7B0 /* ViewController.swift in Sources */,
+				629AB1D12789F0A800CFB7B0 /* AppDelegate.swift in Sources */,
+				629AB1DB2789F0A800CFB7B0 /* Auctioneer.xcdatamodeld in Sources */,
+				629AB1D32789F0A800CFB7B0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		629AB1D62789F0A800CFB7B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				629AB1D72789F0A800CFB7B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		629AB1DE2789F0A900CFB7B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				629AB1DF2789F0A900CFB7B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		629AB1E22789F0A900CFB7B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		629AB1E32789F0A900CFB7B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		629AB1E52789F0A900CFB7B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17A73F031055A5BE54801A73 /* Pods-Auctioneer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 335N7Y9832;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Auctioneer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sg.edu.np.mad.mad21.Auctioneer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		629AB1E62789F0A900CFB7B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC5901F2445564E20E96F313 /* Pods-Auctioneer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 335N7Y9832;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Auctioneer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sg.edu.np.mad.mad21.Auctioneer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		629AB1C82789F0A800CFB7B0 /* Build configuration list for PBXProject "Auctioneer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				629AB1E22789F0A900CFB7B0 /* Debug */,
+				629AB1E32789F0A900CFB7B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		629AB1E42789F0A900CFB7B0 /* Build configuration list for PBXNativeTarget "Auctioneer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				629AB1E52789F0A900CFB7B0 /* Debug */,
+				629AB1E62789F0A900CFB7B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		629AB1D92789F0A800CFB7B0 /* Auctioneer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				629AB1DA2789F0A800CFB7B0 /* Auctioneer.xcdatamodel */,
+			);
+			currentVersion = 629AB1DA2789F0A800CFB7B0 /* Auctioneer.xcdatamodel */;
+			path = Auctioneer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 629AB1C52789F0A800CFB7B0 /* Project object */;
+}
