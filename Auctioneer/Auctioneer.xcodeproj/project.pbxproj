@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		622038152791D5FA00F3BFAD /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 622038142791D5FA00F3BFAD /* Models */; };
+		622038182791D65E00F3BFAD /* ProductUpload_Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622038162791D65E00F3BFAD /* ProductUpload_Response.swift */; };
+		622038192791D65E00F3BFAD /* ProductUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622038172791D65E00F3BFAD /* ProductUpload.swift */; };
 		629AB1D12789F0A800CFB7B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */; };
 		629AB1D32789F0A800CFB7B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */; };
 		629AB1D52789F0A800CFB7B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D42789F0A800CFB7B0 /* ViewController.swift */; };
@@ -20,7 +23,10 @@
 
 /* Begin PBXFileReference section */
 		17A73F031055A5BE54801A73 /* Pods-Auctioneer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.debug.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.debug.xcconfig"; sourceTree = "<group>"; };
-		44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auctioneer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Auctioneer.framework; path = "../../../Library/Developer/Xcode/DerivedData/Auctioneer-gkvoxnszrsdgrhbssoqqpzgylboi/Build/Products/Debug-iphoneos/Pods_Auctioneer.framework"; sourceTree = "<group>"; };
+		622038142791D5FA00F3BFAD /* Models */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Models; path = Auctioneer/Models; sourceTree = SOURCE_ROOT; };
+		622038162791D65E00F3BFAD /* ProductUpload_Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductUpload_Response.swift; sourceTree = "<group>"; };
+		622038172791D65E00F3BFAD /* ProductUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductUpload.swift; sourceTree = "<group>"; };
 		629AB1CD2789F0A800CFB7B0 /* Auctioneer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auctioneer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +36,7 @@
 		629AB1DC2789F0A900CFB7B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		629AB1DF2789F0A900CFB7B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		629AB1E12789F0A900CFB7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		629AB1E72789F2C400CFB7B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		629AB1E72789F2C400CFB7B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/lestercheong/Desktop/Auctioneer-MAD2-Assignment/Auctioneer/Auctioneer/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
 		CC5901F2445564E20E96F313 /* Pods-Auctioneer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.release.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +58,8 @@
 				44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
+			path = "/Users/lestercheong/Desktop/Auctioneer-MAD2-Assignment/Auctioneer";
+			sourceTree = "<absolute>";
 		};
 		629AB1C42789F0A800CFB7B0 = {
 			isa = PBXGroup;
@@ -92,13 +99,17 @@
 		629AB1E92789F2E800CFB7B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				622038162791D65E00F3BFAD /* ProductUpload_Response.swift */,
+				622038172791D65E00F3BFAD /* ProductUpload.swift */,
 			);
-			path = Models;
-			sourceTree = "<group>";
+			name = Models;
+			path = Auctioneer/Models;
+			sourceTree = SOURCE_ROOT;
 		};
 		629AB1EA2789F2EE00CFB7B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				622038142791D5FA00F3BFAD /* Models */,
 				629AB1D42789F0A800CFB7B0 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -173,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				622038152791D5FA00F3BFAD /* Models in Resources */,
 				629AB1E02789F0A900CFB7B0 /* LaunchScreen.storyboard in Resources */,
 				629AB1E82789F2C400CFB7B0 /* GoogleService-Info.plist in Resources */,
 				629AB1DD2789F0A900CFB7B0 /* Assets.xcassets in Resources */,
@@ -231,7 +243,9 @@
 			files = (
 				629AB1D52789F0A800CFB7B0 /* ViewController.swift in Sources */,
 				629AB1D12789F0A800CFB7B0 /* AppDelegate.swift in Sources */,
+				622038192791D65E00F3BFAD /* ProductUpload.swift in Sources */,
 				629AB1DB2789F0A800CFB7B0 /* Auctioneer.xcdatamodeld in Sources */,
+				622038182791D65E00F3BFAD /* ProductUpload_Response.swift in Sources */,
 				629AB1D32789F0A800CFB7B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
