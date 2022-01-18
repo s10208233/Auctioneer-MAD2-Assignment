@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="diamond.righthalf.filled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RSB-dx-cRP">
-                                <rect key="frame" x="107" y="347.5" width="200" height="201.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="MPi-I9-9N9"/>
-                                    <constraint firstAttribute="width" constant="200" id="bI1-13-jdD"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-a1-U2s">
                                 <rect key="frame" x="30" y="696" width="354" height="60"/>
                                 <constraints>
@@ -144,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="1568.1159420289857" y="-19.419642857142858"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="iXe-84-kqM">
             <objects>
-                <viewController id="Cdh-ae-zY8" sceneMemberID="viewController">
+                <viewController id="Cdh-ae-zY8" customClass="LoginViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wKa-qX-g2h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,6 +181,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
+                                    <action selector="Submit_Login:" destination="Cdh-ae-zY8" eventType="touchUpInside" id="qMi-T1-hCT"/>
                                     <segue destination="VIt-ri-eyg" kind="push" id="NaT-xs-k5k"/>
                                 </connections>
                             </button>
@@ -210,6 +204,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V7K-HX-VN6"/>
+                    <connections>
+                        <outlet property="password_input" destination="Sne-Wx-n8d" id="twM-mC-pYz"/>
+                        <outlet property="username_input" destination="xkY-Pg-dM7" id="z4w-Ua-YfL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlY-Xh-RjQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,7 +312,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Mb6-VB-hf7">
             <objects>
-                <tabBarController id="VIt-ri-eyg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainBegin" id="VIt-ri-eyg" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="DOL-N6-dUL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EXT-bs-LXY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -654,7 +652,7 @@
         <!--Auction an item-->
         <scene sceneID="KwD-1E-WrH">
             <objects>
-                <viewController id="FIO-ce-8Ig" sceneMemberID="viewController">
+                <viewController id="FIO-ce-8Ig" customClass="OpenNewAuctionViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nsx-FL-g7f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -673,7 +671,10 @@
                                 </constraints>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" image="square.and.arrow.up" catalog="system" title="Upload Product Image" imagePadding="5"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="square.and.arrow.up" catalog="system" title="Select Item Image" imagePadding="5"/>
+                                <connections>
+                                    <action selector="Select_Item_Image:" destination="FIO-ce-8Ig" eventType="touchUpInside" id="6Vq-Bg-MNO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rt-ja-yuy">
                                 <rect key="frame" x="20" y="496.5" width="374" height="24"/>
@@ -713,6 +714,9 @@
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Auction"/>
+                                <connections>
+                                    <action selector="Submit_Auction:" destination="FIO-ce-8Ig" eventType="touchUpInside" id="om4-5k-g5f"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mR8-cb-S0T"/>
@@ -742,6 +746,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Auction an item" id="yIe-Yn-bnT"/>
+                    <connections>
+                        <outlet property="ClosingDate_Input" destination="H7j-Og-3rW" id="fxY-rG-U8J"/>
+                        <outlet property="ItemName_Input" destination="Ory-3B-fna" id="i1Z-sd-Bli"/>
+                        <outlet property="StartingPrice_input" destination="nXg-MH-rxt" id="T7q-5r-btx"/>
+                        <outlet property="UploadDisplay" destination="C6j-IO-PCF" id="oUa-Nm-StT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fve-3n-K2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -959,7 +969,6 @@
     </scenes>
     <resources>
         <image name="cube.box.fill" catalog="system" width="128" height="124"/>
-        <image name="diamond.righthalf.filled" catalog="system" width="128" height="122"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="key.fill" catalog="system" width="83" height="128"/>
         <image name="photo.circle" catalog="system" width="128" height="121"/>
