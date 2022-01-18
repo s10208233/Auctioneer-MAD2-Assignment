@@ -180,6 +180,9 @@
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <segue destination="VIt-ri-eyg" kind="push" id="NaT-xs-k5k"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4ji-OH-wxc"/>
@@ -491,7 +494,7 @@
         <scene sceneID="1DP-hb-eS1">
             <objects>
                 <navigationController id="jUq-WA-KcC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Listings" selectedImage="cube.box.fill" catalog="system" id="h0p-lH-F04"/>
+                    <tabBarItem key="tabBarItem" title="Listings" image="cube.box.fill" catalog="system" id="h0p-lH-F04"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="RfI-Zp-gr1">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -741,7 +744,7 @@
         <scene sceneID="dna-Xe-9VF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sQm-Da-5NJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" selectedImage="house.fill" catalog="system" id="jcc-Nf-qCG"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="house.fill" catalog="system" id="jcc-Nf-qCG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ySV-G3-nQ8">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -778,7 +781,7 @@
         <scene sceneID="ZP7-dK-eN4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XKj-4I-Nfg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Open" selectedImage="plus.app.fill" catalog="system" id="DGB-gm-N8a"/>
+                    <tabBarItem key="tabBarItem" title="Open" image="plus.app.fill" catalog="system" id="DGB-gm-N8a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zvU-pQ-mNv">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -849,7 +852,7 @@
         <scene sceneID="8q8-ZX-kEK">
             <objects>
                 <navigationController id="gse-4q-h3V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Won" selectedImage="star.fill" catalog="system" id="EWN-bf-l2q"/>
+                    <tabBarItem key="tabBarItem" title="Won" image="star.fill" catalog="system" id="EWN-bf-l2q"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="eoQ-fR-4TK">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
