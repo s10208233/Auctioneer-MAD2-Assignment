@@ -38,7 +38,7 @@ class LoginViewController : UIViewController {
         //  User Authentication Validation
             //  retrieve existing users, loop through and check if un and pw == input, change 'Authenticated' bool to true
         
-            //  WRITE CODE HERE!!!
+            
         
         //  Sucess, instantiate new viewcontroller to home feed.
         if (Authenticated){

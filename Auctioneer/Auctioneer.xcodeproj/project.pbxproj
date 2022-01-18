@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0550BC0B27968F8A001C5BAA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550BC0A27968F89001C5BAA /* SignUpViewController.swift */; };
+		0A646535EC889737BDDCEBE1 /* Pods_Auctioneer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE09A40AC567E77CA8ED93C /* Pods_Auctioneer.framework */; };
 		622038182791D65E00F3BFAD /* ProductUpload_Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622038162791D65E00F3BFAD /* ProductUpload_Response.swift */; };
 		622038192791D65E00F3BFAD /* ProductUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622038172791D65E00F3BFAD /* ProductUpload.swift */; };
-		628835D7279683C400031D9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628835D6279683C400031D9A /* GoogleService-Info.plist */; };
 		628835DB279689C800031D9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835DA279689C800031D9A /* User.swift */; };
 		628835DD27968AF200031D9A /* AuctionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835DC27968AF200031D9A /* AuctionItem.swift */; };
 		628835EB279695E300031D9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835EA279695E300031D9A /* LoginViewController.swift */; };
 		628835ED2796A07D00031D9A /* OpenNewAuctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835EC2796A07D00031D9A /* OpenNewAuctionViewController.swift */; };
+		628835F42796BADB00031D9A /* MainDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835F32796BADB00031D9A /* MainDAL.swift */; };
+		628835F62796D31100031D9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628835F52796D31100031D9A /* GoogleService-Info.plist */; };
+		628835F82796DAC800031D9A /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835F72796DAC800031D9A /* Extention.swift */; };
 		629AB1D12789F0A800CFB7B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */; };
 		629AB1D32789F0A800CFB7B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */; };
 		629AB1D52789F0A800CFB7B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D42789F0A800CFB7B0 /* ViewController.swift */; };
@@ -31,11 +34,13 @@
 		44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Auctioneer.framework; path = "../../../Library/Developer/Xcode/DerivedData/Auctioneer-gkvoxnszrsdgrhbssoqqpzgylboi/Build/Products/Debug-iphoneos/Pods_Auctioneer.framework"; sourceTree = "<group>"; };
 		622038162791D65E00F3BFAD /* ProductUpload_Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductUpload_Response.swift; sourceTree = "<group>"; };
 		622038172791D65E00F3BFAD /* ProductUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductUpload.swift; sourceTree = "<group>"; };
-		628835D6279683C400031D9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		628835DA279689C800031D9A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		628835DC27968AF200031D9A /* AuctionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionItem.swift; sourceTree = "<group>"; };
 		628835EA279695E300031D9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		628835EC2796A07D00031D9A /* OpenNewAuctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNewAuctionViewController.swift; sourceTree = "<group>"; };
+		628835F32796BADB00031D9A /* MainDAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDAL.swift; sourceTree = "<group>"; };
+		628835F52796D31100031D9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		628835F72796DAC800031D9A /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		629AB1CD2789F0A800CFB7B0 /* Auctioneer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auctioneer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		629AB1DF2789F0A900CFB7B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		629AB1E12789F0A900CFB7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC5901F2445564E20E96F313 /* Pods-Auctioneer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.release.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.release.xcconfig"; sourceTree = "<group>"; };
+		FEE09A40AC567E77CA8ED93C /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auctioneer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90DA6D55D83881A1B546BB4F /* Pods_Auctioneer.framework in Frameworks */,
+				0A646535EC889737BDDCEBE1 /* Pods_Auctioneer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */,
+				FEE09A40AC567E77CA8ED93C /* Pods_Auctioneer.framework */,
 			);
 			name = Frameworks;
 			path = "/Users/lestercheong/Desktop/Auctioneer-MAD2-Assignment/Auctioneer";
@@ -99,7 +107,9 @@
 				629AB1D92789F0A800CFB7B0 /* Auctioneer.xcdatamodeld */,
 				629AB1DC2789F0A900CFB7B0 /* Assets.xcassets */,
 				629AB1E12789F0A900CFB7B0 /* Info.plist */,
-				628835D6279683C400031D9A /* GoogleService-Info.plist */,
+				628835F32796BADB00031D9A /* MainDAL.swift */,
+				628835F52796D31100031D9A /* GoogleService-Info.plist */,
+				628835F72796DAC800031D9A /* Extention.swift */,
 			);
 			path = Auctioneer;
 			sourceTree = "<group>";
@@ -197,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				629AB1E02789F0A900CFB7B0 /* LaunchScreen.storyboard in Resources */,
-				628835D7279683C400031D9A /* GoogleService-Info.plist in Resources */,
+				628835F62796D31100031D9A /* GoogleService-Info.plist in Resources */,
 				629AB1DD2789F0A900CFB7B0 /* Assets.xcassets in Resources */,
 				629AB1D82789F0A800CFB7B0 /* Main.storyboard in Resources */,
 			);
@@ -255,6 +265,7 @@
 				629AB1D52789F0A800CFB7B0 /* ViewController.swift in Sources */,
 				629AB1D12789F0A800CFB7B0 /* AppDelegate.swift in Sources */,
 				628835ED2796A07D00031D9A /* OpenNewAuctionViewController.swift in Sources */,
+				628835F82796DAC800031D9A /* Extention.swift in Sources */,
 				622038192791D65E00F3BFAD /* ProductUpload.swift in Sources */,
 				629AB1DB2789F0A800CFB7B0 /* Auctioneer.xcdatamodeld in Sources */,
 				622038182791D65E00F3BFAD /* ProductUpload_Response.swift in Sources */,
@@ -262,6 +273,7 @@
 				0550BC0B27968F8A001C5BAA /* SignUpViewController.swift in Sources */,
 				628835DD27968AF200031D9A /* AuctionItem.swift in Sources */,
 				628835EB279695E300031D9A /* LoginViewController.swift in Sources */,
+				628835F42796BADB00031D9A /* MainDAL.swift in Sources */,
 				628835DB279689C800031D9A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -49,7 +49,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let db = Firestore.firestore()
         db.collection("product_uploads").getDocuments { (snapshot, error) in
                 snapshot!.documents.forEach({ (document) in
-//                    let pair = document.data()
                     let pair = ProductUpload_Response(snapshot: document)
                     let thisProductUpload:ProductUpload = ProductUpload(userkey: pair.userKey, imageurl: pair.imageUrl)
                     self.product_uploads_dict2.updateValue(thisProductUpload, forKey: document.documentID)
@@ -58,13 +57,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
 
 
-//        for (key, value) in self.product_uploads_dict2 {
-//            print("\(key) : \(value)")
-//        }
+
         return product_uploads_dict2
     }
     
-    //  Image Picker
     @IBAction func upload_button_tapped(_ sender: Any) {
         self.imagePickerController.sourceType = .photoLibrary
         self.present(self.imagePickerController, animated: true, completion: nil)
