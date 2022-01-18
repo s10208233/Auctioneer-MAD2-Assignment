@@ -216,7 +216,7 @@
         <!--Home Feed-->
         <scene sceneID="49c-4o-24g">
             <objects>
-                <viewController id="qQf-t2-E6G" sceneMemberID="viewController">
+                <viewController id="qQf-t2-E6G" customClass="HomeFeedViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ou5-x7-RDw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -760,7 +760,7 @@
         <!--Feed-->
         <scene sceneID="dna-Xe-9VF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sQm-Da-5NJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sQm-Da-5NJ" customClass="Home" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feed" image="house.fill" catalog="system" id="jcc-Nf-qCG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ySV-G3-nQ8">

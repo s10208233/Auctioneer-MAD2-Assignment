@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0550BC0B27968F8A001C5BAA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550BC0A27968F89001C5BAA /* SignUpViewController.swift */; };
+		0550BC112796B019001C5BAA /* User_Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550BC102796B019001C5BAA /* User_Response.swift */; };
+		0575F0DE2796DD5B00865DD3 /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0575F0DD2796DD5B00865DD3 /* HomeFeedViewController.swift */; };
 		622038182791D65E00F3BFAD /* ProductUpload_Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622038162791D65E00F3BFAD /* ProductUpload_Response.swift */; };
 		622038192791D65E00F3BFAD /* ProductUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622038172791D65E00F3BFAD /* ProductUpload.swift */; };
 		628835D7279683C400031D9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628835D6279683C400031D9A /* GoogleService-Info.plist */; };
@@ -23,10 +25,13 @@
 		629AB1DD2789F0A900CFB7B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629AB1DC2789F0A900CFB7B0 /* Assets.xcassets */; };
 		629AB1E02789F0A900CFB7B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629AB1DE2789F0A900CFB7B0 /* LaunchScreen.storyboard */; };
 		90DA6D55D83881A1B546BB4F /* Pods_Auctioneer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */; };
+		DD938E7368CC711C68650C82 /* Pods_Auctioneer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39A51CD36C0D557E6AA9A58 /* Pods_Auctioneer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0550BC0A27968F89001C5BAA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0550BC102796B019001C5BAA /* User_Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Response.swift; sourceTree = "<group>"; };
+		0575F0DD2796DD5B00865DD3 /* HomeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
 		17A73F031055A5BE54801A73 /* Pods-Auctioneer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.debug.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.debug.xcconfig"; sourceTree = "<group>"; };
 		44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Auctioneer.framework; path = "../../../Library/Developer/Xcode/DerivedData/Auctioneer-gkvoxnszrsdgrhbssoqqpzgylboi/Build/Products/Debug-iphoneos/Pods_Auctioneer.framework"; sourceTree = "<group>"; };
 		622038162791D65E00F3BFAD /* ProductUpload_Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductUpload_Response.swift; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 		629AB1DC2789F0A900CFB7B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		629AB1DF2789F0A900CFB7B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		629AB1E12789F0A900CFB7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B39A51CD36C0D557E6AA9A58 /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auctioneer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5901F2445564E20E96F313 /* Pods-Auctioneer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.release.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90DA6D55D83881A1B546BB4F /* Pods_Auctioneer.framework in Frameworks */,
+				DD938E7368CC711C68650C82 /* Pods_Auctioneer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */,
+				B39A51CD36C0D557E6AA9A58 /* Pods_Auctioneer.framework */,
 			);
 			name = Frameworks;
 			path = "/Users/lestercheong/Desktop/Auctioneer-MAD2-Assignment/Auctioneer";
@@ -111,6 +119,7 @@
 				622038172791D65E00F3BFAD /* ProductUpload.swift */,
 				628835DA279689C800031D9A /* User.swift */,
 				628835DC27968AF200031D9A /* AuctionItem.swift */,
+				0550BC102796B019001C5BAA /* User_Response.swift */,
 			);
 			name = Models;
 			path = Auctioneer/Models;
@@ -123,6 +132,7 @@
 				0550BC0A27968F89001C5BAA /* SignUpViewController.swift */,
 				628835EA279695E300031D9A /* LoginViewController.swift */,
 				628835EC2796A07D00031D9A /* OpenNewAuctionViewController.swift */,
+				0575F0DD2796DD5B00865DD3 /* HomeFeedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +273,8 @@
 				628835DD27968AF200031D9A /* AuctionItem.swift in Sources */,
 				628835EB279695E300031D9A /* LoginViewController.swift in Sources */,
 				628835DB279689C800031D9A /* User.swift in Sources */,
+				0575F0DE2796DD5B00865DD3 /* HomeFeedViewController.swift in Sources */,
+				0550BC112796B019001C5BAA /* User_Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

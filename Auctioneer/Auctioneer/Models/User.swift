@@ -11,6 +11,7 @@ class User {
     var username:String
     var password:String
     
+    
     init(Username:String,Password:String){
         username = Username
         password = Password

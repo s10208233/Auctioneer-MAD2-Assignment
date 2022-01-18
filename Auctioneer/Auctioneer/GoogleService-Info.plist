@@ -19,16 +19,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>auctioneer-mad2-assignment.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:593973028476:ios:0a59346178083100b14bf9</string>
+	<key>DATABASE_URL</key>
+	<string>https://auctioneer-mad2-assignment-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
 </plist>
