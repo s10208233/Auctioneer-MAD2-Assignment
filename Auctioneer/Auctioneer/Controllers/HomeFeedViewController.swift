@@ -34,13 +34,14 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        productList = []
         retrieveData()
     }
     
     func retrieveData(){
+        productList = []
+        returndict = [:]
         let formatter = DateFormatter()
-        formatter.dateFormat = "d MMM y, h:mm a"    	
+        formatter.dateFormat = "d MMM y, h:mm a"
         let ref = Database.database().reference()
         ref.child("Products").observeSingleEvent(of: .value){ (snapshot) in
         let products = snapshot.value as? [String:Dictionary<String, Any>]
@@ -66,7 +67,6 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
         }
     
     @objc func refresh(_ sender: AnyObject){
-        productList = []
         retrieveData()
         self.HomeFeedTableView.refreshControl!.endRefreshing()
     }
