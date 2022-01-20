@@ -15,7 +15,7 @@ class OpenNewAuctionViewController : UIViewController,
                                      UIImagePickerControllerDelegate,
                                      UINavigationControllerDelegate, UITextFieldDelegate {
     let appdelegate = (UIApplication.shared.delegate) as! AppDelegate
-    var returnedImageUrl:String = ""
+    
     
     //  UIView Components
     @IBOutlet weak var UploadDisplay: UIImageView!
@@ -28,7 +28,9 @@ class OpenNewAuctionViewController : UIViewController,
     //  For Image Picker
     var imagePickerController = UIImagePickerController()
     var imagePickerSourceURL:URL!
-    
+    var returnedImageUrl:String = ""
+    var didUploadImage:Bool = false
+
     //  For Date Picker
     let datepicker = UIDatePicker()
     
@@ -102,6 +104,7 @@ class OpenNewAuctionViewController : UIViewController,
                   } else {
                     // Get the download URL for 'images/stars.jpg'
                       print(url!)
+                      self.didUploadImage = true
                       self.returnedImageUrl = url!.absoluteString
                   }
               }
@@ -162,43 +165,57 @@ class OpenNewAuctionViewController : UIViewController,
     
     @IBAction func Submit_Auction(_ sender: Any) {
         //  Missing Input Validation
-        if (imagePickerSourceURL == nil || imagePickerSourceURL.absoluteString == "") {
+        if (didUploadImage == false) {
             let alert = UIAlertController(title: "Missing Product Information", message: "Please select an image for the item you are auctioning", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Confirm", style: .default))
+            alert.addAction(UIAlertAction(title: "Confirm", style: .default,handler: { [weak self] (_) in
+                return
+            }))
             present(alert, animated: true, completion: nil)
         }
-        if (ItemName_Input.text == nil || ItemName_Input.text == "") {
+        else if (ItemName_Input.text == nil || ItemName_Input.text == "") {
             let alert = UIAlertController(title: "Missing Product Information", message: "Please give a name for the item you are auctioning", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Confirm", style: .default))
+            alert.addAction(UIAlertAction(title: "Confirm", style: .default,handler: { [weak self] (_) in
+                return
+            }))
             present(alert, animated: true, completion: nil)
         }
-        if (StartingPrice_input.text == nil || StartingPrice_input.text == "") {
+        else if (StartingPrice_input.text == nil || StartingPrice_input.text == "") {
             let alert = UIAlertController(title: "Missing Product Information", message: "Please give a starting price for the item you are auctioning", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Confirm", style: .default))
+            alert.addAction(UIAlertAction(title: "Confirm", style: .default,handler: { [weak self] (_) in
+                return
+            }))
             present(alert, animated: true, completion: nil)
         }
-        if (ClosingDate_Input.date > Date().addingTimeInterval(5*60)) {
+        else if (ClosingDate_Input.date < Date()) {
             let alert = UIAlertController(title: "Missing Product Information", message: "Please give a closing time is at least 5 mininutes from now", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Confirm", style: .default))
+            alert.addAction(UIAlertAction(title: "Confirm", style: .default,handler: { [weak self] (_) in
+                return
+            }))
             present(alert, animated: true, completion: nil)
         }
-        do{
+        else{
             // UPLOAD PRODUCT HERE
             //  1st upload image then get back image url from firebase
             //  then create AuctionItem object and store into firebase
             let formatter = DateFormatter()
-            formatter.dateStyle = .short
+            formatter.dateFormat = "d MMM y, h:mm a"
             
             let ref = Database.database().reference()
-            let auctionitem:AuctionItem = AuctionItem(productname: ItemName_Input.text!, imageurl: imagePickerSourceURL.absoluteString, openedby: appdelegate.SignedIn_UserName!, opendate: Date(), closedate: ClosingDate_Input.date, startingprice: Double(StartingPrice_input.text!)!, highestbidprice: 0, highestbidder: "-")
-            
-//            ref.child("Products/").childByAutoId().setValue(["productname": auctionitem.productName,"imageurl":auctionitem.imageUrl,"openby": auctionitem.openedBy,"opendate": auctionitem.openDate,"closedate":auctionitem.closeDate,"starttingprice":auctionitem.startingPrice,"highestbidprice":auctionitem.highestBidPrice,"highestbidder":auctionitem.highestBidder])
-            
             ref.child("Products/").childByAutoId().setValue(["productname": ItemName_Input.text!,"imageurl": returnedImageUrl,"openby": appdelegate.SignedIn_UserName!,"opendate": formatter.string(from: Date()),"closedate":formatter.string(from:ClosingDate_Input.date),"startingprice":Double(StartingPrice_input.text!)!,"highestbidprice":0,"highestbidder":"-"])
             
+            self.tabBarController?.selectedIndex = 0
         }
-        catch{
-            print("Error creating product into firebase")
-        }
+        
+//        // UPLOAD PRODUCT HERE
+//        //  1st upload image then get back image url from firebase
+//        //  then create AuctionItem object and store into firebase
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = .short
+//        
+//        let ref = Database.database().reference()
+//        ref.child("Products/").childByAutoId().setValue(["productname": ItemName_Input.text!,"imageurl": returnedImageUrl,"openby": appdelegate.SignedIn_UserName!,"opendate": formatter.string(from: Date()),"closedate":formatter.string(from:ClosingDate_Input.date),"startingprice":Double(StartingPrice_input.text!)!,"highestbidprice":0,"highestbidder":"-"])
+            
+      
+        
     }
 }

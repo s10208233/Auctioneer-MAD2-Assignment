@@ -39,22 +39,29 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
     }
     
     func retrieveData(){
-            let formatter = DateFormatter()
-            formatter.dateStyle = .short
-
-            let ref = Database.database().reference()
-            ref.child("Products").observeSingleEvent(of: .value){ (snapshot) in
-                let products = snapshot.value as! [String:Dictionary<String, Any>]
-                products.forEach{ pairs in()
-                    self.returndict.updateValue(AuctionItem(productname: pairs.value["productname"] as! String, imageurl: pairs.value["imageurl"] as! String, openedby: pairs.value["openby"] as! String, opendate: formatter.date(from:pairs.value["opendate"] as! String)!, closedate: formatter.date(from:pairs.value["closedate"] as! String)!, startingprice: pairs.value["startingprice"] as! Double, highestbidprice: pairs.value["highestbidprice"] as! Double, highestbidder: pairs.value["highestbidder"] as! String), forKey: pairs.key)
-                }
-                
-                for (key, value) in self.returndict {
-                    self.productList.append(AuctionItem(productname: value.productName, imageurl: value.imageUrl, openedby: value.openedBy, opendate: value.openDate, closedate: value.closeDate, startingprice: value.startingPrice, highestbidprice: value.highestBidPrice, highestbidder: value.highestBidder))
-                }
-                print("outside\(self.returndict)")
-                self.HomeFeedTableView.reloadData()
-               
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMM y, h:mm a"    	
+        let ref = Database.database().reference()
+        ref.child("Products").observeSingleEvent(of: .value){ (snapshot) in
+        let products = snapshot.value as? [String:Dictionary<String, Any>]
+        products?.forEach{ pairs in()
+            self.returndict.updateValue(AuctionItem(productname: pairs.value["productname"] as! String,
+                                                    imageurl: pairs.value["imageurl"] as! String,
+                                                    openedby: pairs.value["openby"] as! String,
+                                                    opendate: formatter.date(from:pairs.value["opendate"] as! String)!,
+                                                    closedate: formatter.date(from:pairs.value["closedate"] as! String)!,
+                                                    startingprice: pairs.value["startingprice"] as! Double,
+                                                    highestbidprice: pairs.value["highestbidprice"] as! Double,
+                                                    highestbidder: pairs.value["highestbidder"] as! String),
+                                        forKey: pairs.key)}
+            
+            
+            for (key, value) in self.returndict {
+                self.productList.append(AuctionItem(productname: value.productName, imageurl: value.imageUrl, openedby: value.openedBy, opendate: value.openDate, closedate: value.closeDate, startingprice: value.startingPrice, highestbidprice: value.highestBidPrice, highestbidder: value.highestBidder))
+            }
+            print("outside\(self.returndict)")
+            self.HomeFeedTableView.reloadData()
+           
             }
         }
     
