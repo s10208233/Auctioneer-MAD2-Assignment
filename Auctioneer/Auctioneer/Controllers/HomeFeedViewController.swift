@@ -27,6 +27,7 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
         HomeFeedTableView.reloadData()
         
         //  Implement Refresh Control
+        HomeFeedTableView.refreshControl?.tintColor  = .white
         HomeFeedTableView.refreshControl = UIRefreshControl()
         HomeFeedTableView.refreshControl?.attributedTitle = NSAttributedString(string: "Refreshing...")
         HomeFeedTableView.refreshControl?.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
@@ -67,7 +68,7 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
     //  TableView Cell bindings
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         //  Cell Height
-        return 165
+        return 150
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
