@@ -14,6 +14,7 @@ class HomeFeedCustomCell: UITableViewCell {
     @IBOutlet weak var Cell_ItemNameLabel: UILabel!
     @IBOutlet weak var Cell_StartingPriceLabel: UILabel!
     @IBOutlet weak var Cell_NowAtPrice_Label: UILabel!
+    @IBOutlet weak var Cell_ClosesOn_Label: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
