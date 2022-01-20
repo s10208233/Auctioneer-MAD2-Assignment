@@ -41,7 +41,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="sign up"/>
                                 <connections>
-                                    <segue destination="eoF-Ou-CEh" kind="push" id="cV4-4P-Ofi"/>
+                                    <segue destination="eoF-Ou-CEh" kind="push" identifier="LoginSegue" id="cV4-4P-Ofi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,7 +105,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2IQ-wd-nPc">
                                         <rect key="frame" x="0.0" y="49" width="354" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -140,7 +140,7 @@
         <!--Login View Controller-->
         <scene sceneID="iXe-84-kqM">
             <objects>
-                <viewController id="Cdh-ae-zY8" customClass="LoginViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPage" id="Cdh-ae-zY8" customClass="LoginViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wKa-qX-g2h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,7 +168,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sne-Wx-n8d">
                                         <rect key="frame" x="0.0" y="54" width="354" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -182,7 +182,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
                                     <action selector="Submit_Login:" destination="Cdh-ae-zY8" eventType="touchUpInside" id="qMi-T1-hCT"/>
-                                    <segue destination="VIt-ri-eyg" kind="push" id="NaT-xs-k5k"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -38,6 +38,13 @@ class SignUpViewController: UIViewController {
         
         user = User(Username: newUsername.text!, Password: newPassword.text!)
         ref.child("Users/").childByAutoId().setValue(["Username":newUsername.text!,"Password":newPassword.text!])
+        //  Prompt users that login is sucessful and redirect to login page
+        let alert = UIAlertController(title: "Success", message: "Your account has been created! Login now to start using Auctioneer!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: {[weak alert] (_) in
+            self.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "LoginPage", sender: nil)
+        }))
+        present(alert, animated: true)
     }
     
 }
