@@ -41,19 +41,19 @@
                                     <segue destination="eoF-Ou-CEh" kind="push" identifier="" id="cV4-4P-Ofi"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="lae-jK-tPD">
-                                <rect key="frame" x="133.5" y="271.5" width="147.5" height="182.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lae-jK-tPD">
+                                <rect key="frame" x="84.5" y="182.5" width="245.5" height="260.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ba-6M-osW">
-                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="119.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="245.5" height="197"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="165"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auctioneer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVK-mE-Gkg">
-                                        <rect key="frame" x="0.0" y="144.5" width="147.5" height="38"/>
-                                        <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="30"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="197" width="245.5" height="63.5"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="50"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -64,11 +64,11 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l3j-QG-fE3" secondAttribute="bottom" constant="60" id="1ZO-rW-GfN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r3P-a1-U2s" secondAttribute="trailing" constant="30" id="7XR-q0-jKS"/>
-                            <constraint firstItem="lae-jK-tPD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="I03-F4-CmA"/>
+                            <constraint firstItem="lae-jK-tPD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="Q4W-9Y-Dt4"/>
                             <constraint firstItem="l3j-QG-fE3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="X8i-dX-eDN"/>
+                            <constraint firstItem="lae-jK-tPD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XVC-Nx-Kgl"/>
                             <constraint firstItem="l3j-QG-fE3" firstAttribute="top" secondItem="r3P-a1-U2s" secondAttribute="bottom" constant="15" id="b44-tF-529"/>
                             <constraint firstItem="r3P-a1-U2s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="iOu-8i-fWc"/>
-                            <constraint firstItem="lae-jK-tPD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mza-RQ-TUf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l3j-QG-fE3" secondAttribute="trailing" constant="30" id="xYR-IY-mAQ"/>
                         </constraints>
                     </view>

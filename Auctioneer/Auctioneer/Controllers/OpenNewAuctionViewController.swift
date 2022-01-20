@@ -43,6 +43,15 @@ class OpenNewAuctionViewController : UIViewController,
         //  Create date picker for Closing Date Input
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UploadDisplay.image = nil
+        ClosingDate_Input.date = Date()
+        ItemName_Input.text = ""
+        StartingPrice_input.text = ""
+    }
+    
+    
     //  UIView Button Action
     @IBAction func Select_Item_Image(_ sender: Any) {
         let vc = UIImagePickerController()
@@ -166,28 +175,28 @@ class OpenNewAuctionViewController : UIViewController,
     @IBAction func Submit_Auction(_ sender: Any) {
         //  Missing Input Validation
         if (didUploadImage == false) {
-            let alert = UIAlertController(title: "Missing Product Information", message: "Please select an image for the item you are auctioning", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Missing/Invalid Product Information", message: "Please select an image for the item you are auctioning", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Confirm", style: .default,handler: { [weak self] (_) in
                 return
             }))
             present(alert, animated: true, completion: nil)
         }
         else if (ItemName_Input.text == nil || ItemName_Input.text == "") {
-            let alert = UIAlertController(title: "Missing Product Information", message: "Please give a name for the item you are auctioning", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Missing/Invalid Product Information", message: "Please give a name for the item you are auctioning", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Confirm", style: .default,handler: { [weak self] (_) in
                 return
             }))
             present(alert, animated: true, completion: nil)
         }
         else if (StartingPrice_input.text == nil || StartingPrice_input.text == "") {
-            let alert = UIAlertController(title: "Missing Product Information", message: "Please give a starting price for the item you are auctioning", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Missing/Invalid Product Information", message: "Please give a starting price for the item you are auctioning", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Confirm", style: .default,handler: { [weak self] (_) in
                 return
             }))
             present(alert, animated: true, completion: nil)
         }
         else if (ClosingDate_Input.date < Date()) {
-            let alert = UIAlertController(title: "Missing Product Information", message: "Please give a closing time is at least 5 mininutes from now", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Missing/Invalid Product Information", message: "Please give a valid closing time, your closing time has passed", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Confirm", style: .default,handler: { [weak self] (_) in
                 return
             }))
