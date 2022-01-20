@@ -41,8 +41,10 @@ class SignUpViewController: UIViewController {
         //  Prompt users that login is sucessful and redirect to login page
         let alert = UIAlertController(title: "Success", message: "Your account has been created! Login now to start using Auctioneer!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: {[weak alert] (_) in
-            self.dismiss(animated: true, completion: nil)
-            self.performSegue(withIdentifier: "LoginPage", sender: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginPage") as UIViewController
+            vc.modalPresentationStyle = .fullScreen // try without fullscreen?
+            self.present(vc, animated: true, completion: nil)
         }))
         present(alert, animated: true)
     }
