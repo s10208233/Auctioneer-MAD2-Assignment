@@ -661,17 +661,17 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C6j-IO-PCF">
                                 <rect key="frame" x="20" y="160.5" width="374" height="260.5"/>
-                                <color key="tintColor" systemColor="systemGray3Color"/>
+                                <color key="tintColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="261.5" id="Caw-eH-ZfI"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-kA-J1f">
-                                <rect key="frame" x="20" y="436.5" width="374" height="30"/>
+                                <rect key="frame" x="20" y="436.5" width="374" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="kOu-po-cdm"/>
+                                    <constraint firstAttribute="height" constant="40" id="kOu-po-cdm"/>
                                 </constraints>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="square.and.arrow.up" catalog="system" title="Select Item Image" imagePadding="5"/>
                                 <connections>
@@ -679,35 +679,27 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rt-ja-yuy">
-                                <rect key="frame" x="20" y="496.5" width="374" height="24"/>
+                                <rect key="frame" x="20" y="506.5" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ory-3B-fna">
-                                <rect key="frame" x="20" y="535.5" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="wbm-dp-BE5"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="545.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Closing date &amp; time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7j-Og-3rW">
-                                <rect key="frame" x="20" y="580.5" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="mwa-Qx-Z4z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="date-time"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Starting price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nXg-MH-rxt">
-                                <rect key="frame" x="20" y="625.5" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="zxS-gN-RWM"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="594.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="address-line1"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Closing Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X1-Qq-Sy7">
+                                <rect key="frame" x="20" y="643.5" width="127" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeN-f4-hms">
                                 <rect key="frame" x="20" y="738" width="374" height="60"/>
                                 <constraints>
@@ -720,36 +712,45 @@
                                     <action selector="Submit_Auction:" destination="FIO-ce-8Ig" eventType="touchUpInside" id="om4-5k-g5f"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Closing Date" datePickerMode="dateAndTime" minuteInterval="5" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swE-ie-cZo">
+                                <rect key="frame" x="10" y="638.5" width="384" height="31"/>
+                                <date key="date" timeIntervalSinceReferenceDate="664317228.65766597">
+                                    <!--2022-01-19 20:33:48 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mR8-cb-S0T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="C6j-IO-PCF" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="0iJ-Ae-Ng8"/>
-                            <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="Ory-3B-fna" secondAttribute="trailing" constant="20" id="6Jp-8r-10a"/>
-                            <constraint firstItem="5rt-ja-yuy" firstAttribute="top" secondItem="f7i-kA-J1f" secondAttribute="bottom" constant="30" id="7aR-jo-ar0"/>
                             <constraint firstItem="DeN-f4-hms" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="AEi-Tt-pEG"/>
                             <constraint firstItem="5rt-ja-yuy" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="FbF-Wa-F9F"/>
-                            <constraint firstItem="Ory-3B-fna" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="GCd-8z-sDb"/>
-                            <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="H7j-Og-3rW" secondAttribute="trailing" constant="20" id="Ibz-Df-gmb"/>
-                            <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="nXg-MH-rxt" secondAttribute="trailing" constant="20" id="J9S-1C-pzY"/>
+                            <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="Ory-3B-fna" secondAttribute="trailing" constant="20" id="GIo-SA-u82"/>
+                            <constraint firstItem="nXg-MH-rxt" firstAttribute="top" secondItem="Ory-3B-fna" secondAttribute="bottom" constant="15" id="Ivd-vS-IJl"/>
                             <constraint firstItem="f7i-kA-J1f" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="KL2-in-JCN"/>
                             <constraint firstItem="f7i-kA-J1f" firstAttribute="top" secondItem="C6j-IO-PCF" secondAttribute="bottom" constant="15" id="OQJ-Ss-uCn"/>
-                            <constraint firstItem="Ory-3B-fna" firstAttribute="top" secondItem="5rt-ja-yuy" secondAttribute="bottom" constant="15" id="VJB-fY-wWm"/>
-                            <constraint firstItem="H7j-Og-3rW" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="aRw-Xw-EPA"/>
+                            <constraint firstItem="9X1-Qq-Sy7" firstAttribute="top" secondItem="nXg-MH-rxt" secondAttribute="bottom" constant="15" id="P0l-Bs-dI8"/>
+                            <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="swE-ie-cZo" secondAttribute="trailing" constant="20" id="QWa-99-zyv"/>
+                            <constraint firstItem="5rt-ja-yuy" firstAttribute="top" secondItem="f7i-kA-J1f" secondAttribute="bottom" constant="30" id="T6h-Xs-cIx"/>
+                            <constraint firstItem="Ory-3B-fna" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="WMl-mj-Ife"/>
+                            <constraint firstItem="9X1-Qq-Sy7" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="Z24-1d-at4"/>
+                            <constraint firstItem="swE-ie-cZo" firstAttribute="top" secondItem="nXg-MH-rxt" secondAttribute="bottom" constant="10" id="cmm-dY-W4o"/>
                             <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="DeN-f4-hms" secondAttribute="trailing" constant="20" id="fYx-9E-peB"/>
                             <constraint firstItem="mR8-cb-S0T" firstAttribute="bottom" secondItem="DeN-f4-hms" secondAttribute="bottom" constant="15" id="icv-Hw-Y0C"/>
-                            <constraint firstItem="nXg-MH-rxt" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="idP-qO-ZZF"/>
                             <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="f7i-kA-J1f" secondAttribute="trailing" constant="20" id="lct-i0-gy2"/>
-                            <constraint firstItem="nXg-MH-rxt" firstAttribute="top" secondItem="H7j-Og-3rW" secondAttribute="bottom" constant="5" id="oHi-x0-ZQU"/>
+                            <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="nXg-MH-rxt" secondAttribute="trailing" constant="20" id="mr2-4N-RDU"/>
+                            <constraint firstItem="Ory-3B-fna" firstAttribute="top" secondItem="5rt-ja-yuy" secondAttribute="bottom" constant="15" id="prV-Eb-tp1"/>
+                            <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="swE-ie-cZo" secondAttribute="trailing" constant="20" id="r5L-rk-JNS"/>
                             <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="5rt-ja-yuy" secondAttribute="trailing" constant="20" id="rZj-E4-hHx"/>
-                            <constraint firstItem="H7j-Og-3rW" firstAttribute="top" secondItem="Ory-3B-fna" secondAttribute="bottom" constant="5" id="s8Q-u5-Xaj"/>
+                            <constraint firstItem="swE-ie-cZo" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="10" id="tcl-Ca-08W"/>
+                            <constraint firstItem="nXg-MH-rxt" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="uFR-yk-W5i"/>
                             <constraint firstItem="C6j-IO-PCF" firstAttribute="top" secondItem="mR8-cb-S0T" secondAttribute="top" constant="20" id="y9p-8Q-Rud"/>
                             <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="C6j-IO-PCF" secondAttribute="trailing" constant="20" id="yer-DK-zKY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Auction an item" id="yIe-Yn-bnT"/>
                     <connections>
-                        <outlet property="ClosingDate_Input" destination="H7j-Og-3rW" id="fxY-rG-U8J"/>
+                        <outlet property="ClosingDate_Input" destination="swE-ie-cZo" id="CCf-sl-XXZ"/>
                         <outlet property="ItemName_Input" destination="Ory-3B-fna" id="i1Z-sd-Bli"/>
                         <outlet property="StartingPrice_input" destination="nXg-MH-rxt" id="T7q-5r-btx"/>
                         <outlet property="UploadDisplay" destination="C6j-IO-PCF" id="oUa-Nm-StT"/>
@@ -982,8 +983,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -993,6 +994,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
