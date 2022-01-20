@@ -194,7 +194,7 @@ class OpenNewAuctionViewController : UIViewController,
             
 //            ref.child("Products/").childByAutoId().setValue(["productname": auctionitem.productName,"imageurl":auctionitem.imageUrl,"openby": auctionitem.openedBy,"opendate": auctionitem.openDate,"closedate":auctionitem.closeDate,"starttingprice":auctionitem.startingPrice,"highestbidprice":auctionitem.highestBidPrice,"highestbidder":auctionitem.highestBidder])
             
-            ref.child("Products/").childByAutoId().setValue(["productname": ItemName_Input.text!,"imageurl": returnedImageUrl,"openby": appdelegate.SignedIn_UserName!,"opendate": formatter.string(from: Date()),"closedate":formatter.string(from:ClosingDate_Input.date),"starttingprice":Double(StartingPrice_input.text!)!,"highestbidprice":0,"highestbidder":"-"])
+            ref.child("Products/").childByAutoId().setValue(["productname": ItemName_Input.text!,"imageurl": returnedImageUrl,"openby": appdelegate.SignedIn_UserName!,"opendate": formatter.string(from: Date()),"closedate":formatter.string(from:ClosingDate_Input.date),"startingprice":Double(StartingPrice_input.text!)!,"highestbidprice":0,"highestbidder":"-"])
             
         }
         catch{
