@@ -18,7 +18,8 @@
 		628835ED2796A07D00031D9A /* OpenNewAuctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835EC2796A07D00031D9A /* OpenNewAuctionViewController.swift */; };
 		628835F42796BADB00031D9A /* MainDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835F32796BADB00031D9A /* MainDAL.swift */; };
 		628835F62796D31100031D9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628835F52796D31100031D9A /* GoogleService-Info.plist */; };
-		628835F82796DAC800031D9A /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835F72796DAC800031D9A /* Extention.swift */; };
+		62896F032799647B009AFDDD /* HomeFeedCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62896F022799647B009AFDDD /* HomeFeedCustomCell.swift */; };
+		62896F0527998195009AFDDD /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62896F0427998195009AFDDD /* CustomImageView.swift */; };
 		629AB1D12789F0A800CFB7B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */; };
 		629AB1D32789F0A800CFB7B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */; };
 		629AB1D52789F0A800CFB7B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D42789F0A800CFB7B0 /* ViewController.swift */; };
@@ -44,7 +45,8 @@
 		628835EC2796A07D00031D9A /* OpenNewAuctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNewAuctionViewController.swift; sourceTree = "<group>"; };
 		628835F32796BADB00031D9A /* MainDAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDAL.swift; sourceTree = "<group>"; };
 		628835F52796D31100031D9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		628835F72796DAC800031D9A /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		62896F022799647B009AFDDD /* HomeFeedCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedCustomCell.swift; sourceTree = "<group>"; };
+		62896F0427998195009AFDDD /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		629AB1CD2789F0A800CFB7B0 /* Auctioneer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auctioneer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +115,8 @@
 				629AB1E12789F0A900CFB7B0 /* Info.plist */,
 				628835F32796BADB00031D9A /* MainDAL.swift */,
 				628835F52796D31100031D9A /* GoogleService-Info.plist */,
-				628835F72796DAC800031D9A /* Extention.swift */,
+				62896F022799647B009AFDDD /* HomeFeedCustomCell.swift */,
+				62896F0427998195009AFDDD /* CustomImageView.swift */,
 			);
 			path = Auctioneer;
 			sourceTree = "<group>";
@@ -271,7 +274,6 @@
 				629AB1D52789F0A800CFB7B0 /* ViewController.swift in Sources */,
 				629AB1D12789F0A800CFB7B0 /* AppDelegate.swift in Sources */,
 				628835ED2796A07D00031D9A /* OpenNewAuctionViewController.swift in Sources */,
-				628835F82796DAC800031D9A /* Extention.swift in Sources */,
 				622038192791D65E00F3BFAD /* ProductUpload.swift in Sources */,
 				629AB1DB2789F0A800CFB7B0 /* Auctioneer.xcdatamodeld in Sources */,
 				622038182791D65E00F3BFAD /* ProductUpload_Response.swift in Sources */,
@@ -279,9 +281,11 @@
 				0550BC0B27968F8A001C5BAA /* SignUpViewController.swift in Sources */,
 				628835DD27968AF200031D9A /* AuctionItem.swift in Sources */,
 				628835EB279695E300031D9A /* LoginViewController.swift in Sources */,
+				62896F032799647B009AFDDD /* HomeFeedCustomCell.swift in Sources */,
 				628835F42796BADB00031D9A /* MainDAL.swift in Sources */,
 				628835DB279689C800031D9A /* User.swift in Sources */,
 				0575F0DE2796DD5B00865DD3 /* HomeFeedViewController.swift in Sources */,
+				62896F0527998195009AFDDD /* CustomImageView.swift in Sources */,
 				0550BC112796B019001C5BAA /* User_Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
