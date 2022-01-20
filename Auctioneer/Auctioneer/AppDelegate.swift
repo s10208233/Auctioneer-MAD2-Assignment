@@ -19,9 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //  Global Variables OR SharedPrefs?
     var SignedIn_UserKey:String?
     var SignedIn_UserName:String?
+    var SelectedToViewAuctionItem:AuctionItem?
     
     
-    var product_uploads_dict:[String:ProductUpload]    = [:]
+    var product_uploads_dict:[String:ProductUpload] = [:]
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

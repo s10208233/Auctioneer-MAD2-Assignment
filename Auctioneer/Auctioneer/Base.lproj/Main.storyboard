@@ -227,6 +227,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CcT-9o-sqE">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HFCustomCell" rowHeight="413" id="xA5-Xf-iw8" customClass="HomeFeedCustomCell" customModule="Auctioneer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="413"/>
@@ -665,7 +666,7 @@
         <!--Auction an item-->
         <scene sceneID="KwD-1E-WrH">
             <objects>
-                <viewController id="FIO-ce-8Ig" customClass="OpenNewAuctionViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreatePage" id="FIO-ce-8Ig" customClass="OpenNewAuctionViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nsx-FL-g7f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

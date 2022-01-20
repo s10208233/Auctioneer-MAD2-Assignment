@@ -79,12 +79,12 @@ class OpenNewAuctionViewController : UIViewController,
         if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
             print(url)
             let storage = Storage.storage()
-            var storageRef = storage.reference()
+            let storageRef = storage.reference()
                 
             imagePickerSourceURL = url
-            var thisurl:String = url.absoluteString
+            let thisurl:String = url.absoluteString
             let fullNameArr = thisurl.components(separatedBy: "/")
-            var firstName: String = fullNameArr[fullNameArr.count-1]
+            let firstName: String = fullNameArr[fullNameArr.count-1]
             let imageRef = storageRef.child("product_images/\(firstName)")
 
             let uploadTask = imageRef.putFile(from: imagePickerSourceURL, metadata: nil) {metadata, error in
@@ -177,7 +177,7 @@ class OpenNewAuctionViewController : UIViewController,
             alert.addAction(UIAlertAction(title: "Confirm", style: .default))
             present(alert, animated: true, completion: nil)
         }
-        if (ClosingDate_Input.date > ClosingDate_Input.date.addingTimeInterval(5*60)) {
+        if (ClosingDate_Input.date > Date().addingTimeInterval(5*60)) {
             let alert = UIAlertController(title: "Missing Product Information", message: "Please give a closing time is at least 5 mininutes from now", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Confirm", style: .default))
             present(alert, animated: true, completion: nil)
