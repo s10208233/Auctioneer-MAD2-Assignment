@@ -10,7 +10,8 @@ import FirebaseDatabase
 import UIKit
 
 class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    let appdelegate = (UIApplication.shared.delegate) as! AppDelegate
+
     let testitems = [
 
     AuctionItem(
