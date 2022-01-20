@@ -11,15 +11,10 @@ import UIKit
 
 class HomeFeedViewController: UIViewController{
     
-
+    let appdelegate = (UIApplication.shared.delegate) as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-
-    
-    func retrieveData()->[String:User]{
         var returndict:[String:User] = [:]
         let ref = Database.database().reference()
         ref.child("Users").observeSingleEvent(of: .value){ (snapshot) in
@@ -27,7 +22,12 @@ class HomeFeedViewController: UIViewController{
             users.forEach{ pairs in
                 returndict.updateValue(User(Username: pairs.value["Username"] as! String, Password:pairs.value["Password"] as! String), forKey: pairs.key)
             }
+            print("outside\(returndict)")
+            print(self.appdelegate.SignedIn_UserKey!)
+            //Populate recycler view here
+            
         }
-        return returndict
+    
+    
     }
 }

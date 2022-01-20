@@ -8,13 +8,14 @@
 import Foundation
 import UIKit
 import FirebaseStorage
+import FirebaseDatabase
 import Photos
 
 class OpenNewAuctionViewController : UIViewController,
                                      UIImagePickerControllerDelegate,
                                      UINavigationControllerDelegate, UITextFieldDelegate {
     let appdelegate = (UIApplication.shared.delegate) as! AppDelegate
-
+    var returnedImageUrl:String = ""
     
     //  UIView Components
     @IBOutlet weak var UploadDisplay: UIImageView!
@@ -79,9 +80,13 @@ class OpenNewAuctionViewController : UIViewController,
             print(url)
             let storage = Storage.storage()
             var storageRef = storage.reference()
-
+                
             imagePickerSourceURL = url
-            let imageRef = storageRef.child("product_images/lol1")
+            var thisurl:String = url.absoluteString
+            let fullNameArr = thisurl.components(separatedBy: "/")
+            var firstName: String = fullNameArr[fullNameArr.count-1]
+            let imageRef = storageRef.child("product_images/\(firstName)")
+
             let uploadTask = imageRef.putFile(from: imagePickerSourceURL, metadata: nil) {metadata, error in
               guard let metadata = metadata else {
                 // Uh-oh, an error occurred!
@@ -90,11 +95,15 @@ class OpenNewAuctionViewController : UIViewController,
               // Metadata contains file metadata such as size, content-type.
               let size = metadata.size
               // You can also access to download URL after upload.
-              imageRef.downloadURL { (url, error) in
-                  guard let downloadURL = url else {
-                  // Uh-oh, an error occurred!
-                  return
-                }
+                imageRef.downloadURL { url, error in
+                  if let error = error {
+                    // Handle any errors
+                      print(error)
+                  } else {
+                    // Get the download URL for 'images/stars.jpg'
+                      print(url!)
+                      self.returnedImageUrl = url!.absoluteString
+                  }
               }
             }
             
@@ -168,8 +177,8 @@ class OpenNewAuctionViewController : UIViewController,
             alert.addAction(UIAlertAction(title: "Confirm", style: .default))
             present(alert, animated: true, completion: nil)
         }
-        if (StartingPrice_input.text == nil || StartingPrice_input.text == "") {
-            let alert = UIAlertController(title: "Missing Product Information", message: "Please give a closing date & time for the item you are auctioning", preferredStyle: .alert)
+        if (ClosingDate_Input.date > ClosingDate_Input.date.addingTimeInterval(5*60)) {
+            let alert = UIAlertController(title: "Missing Product Information", message: "Please give a closing time is at least 5 mininutes from now", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Confirm", style: .default))
             present(alert, animated: true, completion: nil)
         }
@@ -177,6 +186,16 @@ class OpenNewAuctionViewController : UIViewController,
             // UPLOAD PRODUCT HERE
             //  1st upload image then get back image url from firebase
             //  then create AuctionItem object and store into firebase
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            
+            let ref = Database.database().reference()
+            let auctionitem:AuctionItem = AuctionItem(productname: ItemName_Input.text!, imageurl: imagePickerSourceURL.absoluteString, openedby: appdelegate.SignedIn_UserName!, opendate: Date(), closedate: ClosingDate_Input.date, startingprice: Double(StartingPrice_input.text!)!, highestbidprice: 0, highestbidder: "-")
+            
+//            ref.child("Products/").childByAutoId().setValue(["productname": auctionitem.productName,"imageurl":auctionitem.imageUrl,"openby": auctionitem.openedBy,"opendate": auctionitem.openDate,"closedate":auctionitem.closeDate,"starttingprice":auctionitem.startingPrice,"highestbidprice":auctionitem.highestBidPrice,"highestbidder":auctionitem.highestBidder])
+            
+            ref.child("Products/").childByAutoId().setValue(["productname": ItemName_Input.text!,"imageurl": returnedImageUrl,"openby": appdelegate.SignedIn_UserName!,"opendate": formatter.string(from: Date()),"closedate":formatter.string(from:ClosingDate_Input.date),"starttingprice":Double(StartingPrice_input.text!)!,"highestbidprice":0,"highestbidder":"-"])
+            
         }
         catch{
             print("Error creating product into firebase")
