@@ -56,7 +56,6 @@
 		629AB1E12789F0A900CFB7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B39A51CD36C0D557E6AA9A58 /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auctioneer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5901F2445564E20E96F313 /* Pods-Auctioneer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.release.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.release.xcconfig"; sourceTree = "<group>"; };
-		FEE09A40AC567E77CA8ED93C /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auctioneer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
