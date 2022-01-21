@@ -47,7 +47,7 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
         auctionItemRef.observe(.value){ (snapshot) in
             let value = snapshot.value as? NSDictionary
             self.HighestBidder_Label.text = "\(value?["highestbidder"] as! String)"
-            self.HighestBiddingPrice_Label.text =  "$\(value?["highestbidprice"] as! String)"
+            self.HighestBiddingPrice_Label.text =  "$\(value?["highestbidprice"] as! Double)"
         }
     
         if (thisAuctionItem.highestBidPrice < thisAuctionItem.startingPrice){
@@ -94,7 +94,7 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
             if (thisAuctionItem.highestBidPrice < thisAuctionItem.startingPrice){
                 if (Double(NewBidAmount_Input.text!)! >= thisAuctionItem.startingPrice){
                     let ref = Database.database().reference()
-                    ref.child("Products/").child(thisProductKey).child("highestbidprice").setValue(NewBidAmount_Input.text!)
+                    ref.child("Products/").child(thisProductKey).child("highestbidprice").setValue(Double(NewBidAmount_Input.text!)!)
                     ref.child("Products/").child(thisProductKey).child("highestbidder").setValue(appdelegate.SignedIn_UserName!)
                 }
                 else{
@@ -106,7 +106,7 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
             else{
                 if (Double(NewBidAmount_Input.text!)! > thisAuctionItem.highestBidPrice){
                     let ref = Database.database().reference()
-                    ref.child("Products/").child(thisProductKey).child("highestbidprice").setValue(NewBidAmount_Input.text!)
+                    ref.child("Products/").child(thisProductKey).child("highestbidprice").setValue(Double(NewBidAmount_Input.text!)!)
                     ref.child("Products/").child(thisProductKey).child("highestbidder").setValue(appdelegate.SignedIn_UserName!)
                 }
                 else{

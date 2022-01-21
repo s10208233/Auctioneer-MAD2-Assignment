@@ -35,7 +35,7 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
     
     //  Refresh on resuming this view
     override func viewDidAppear(_ animated: Bool) {
-        retrieveData()
+//        retrieveData()
         self.HomeFeedTableView.reloadData()
     }
     
@@ -76,12 +76,13 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
     
     //  DATA
     func retrieveData(){
-            AuctionItemList = []
-            AuctionItemDictionary = [:]
+            
             let formatter = DateFormatter()
             formatter.dateFormat = "d MMM y, h:mm a"
             let ref = Database.database().reference()
-            ref.child("Products").observeSingleEvent(of: .value){ (snapshot) in
+            ref.child("Products").observe(.value){ (snapshot) in
+                self.AuctionItemList = []
+                self.AuctionItemDictionary = [:]
             let products = snapshot.value as? [String:Dictionary<String, Any>]
             products?.forEach{ pairs in()
                 self.AuctionItemDictionary.updateValue(AuctionItem(productname: pairs.value["productname"] as! String,
