@@ -21,9 +21,14 @@ class YourListingViewController: UITableViewController {
         
 //        self.tableView.reloadData()
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
+    }
+    
+    @IBAction func pullDownRefresh(_ sender: UIRefreshControl) {
+        retrieveData()
+        self.tableView.reloadData()
+        self.tableView.refreshControl!.endRefreshing()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,13 +47,12 @@ class YourListingViewController: UITableViewController {
                 image?.loadImage(from: url)
             }
             if (AuctionItem.isnotClosed == true){
-                cell.detailTextLabel!.text = "Open \(AuctionItem.highestBidder) " + "\(AuctionItem.openedBy)"
+                cell.detailTextLabel!.text = "Open"
             }
             else{
                 cell.detailTextLabel!.text = "Closed \(AuctionItem.highestBidder) " + "\(AuctionItem.openedBy)"
             }
             cell.textLabel!.text = AuctionItem.productName
-            
         return cell
         
     }
