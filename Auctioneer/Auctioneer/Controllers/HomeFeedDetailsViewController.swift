@@ -25,12 +25,15 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NewBidAmount_Input.text = ""
         NewBidAmount_Input.keyboardType = .decimalPad
         NewBidAmount_Input.delegate = self
         NewBidAmount_Input.keyboardType = .decimalPad
         
         let thisAuctionItem:AuctionItem = (appdelegate.SelectedToViewAuctionItem)!
+        let auctionItemRef = Database.database().reference().child("Products").child("\((self.appdelegate.SelectedToViewAuctionItem?.uniqueKey)!)")
+        title = thisAuctionItem.productName
         
         if let url = URL(string: thisAuctionItem.imageUrl){
             Item_CustomImageView.loadImage(from: url)
@@ -40,10 +43,14 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
         ClosingDate_Label.text? = formatter.string(from: thisAuctionItem.closeDate)
         ClosingDate_Label.text? = formatter.string(from: thisAuctionItem.openDate)
         OpenedBy_Label.text = thisAuctionItem.openedBy
-        HighestBidder_Label.text = thisAuctionItem.highestBidder
-        HighestBiddingPrice_Label.text = "$\(String(format: "%.2f", thisAuctionItem.highestBidPrice))"
         
-        if (thisAuctionItem.highestBidPrice <= thisAuctionItem.startingPrice){
+        auctionItemRef.observe(.value){ (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.HighestBidder_Label.text = "\(value?["highestbidder"] as! String)"
+            self.HighestBiddingPrice_Label.text =  "$\(value?["highestbidprice"] as! String)"
+        }
+    
+        if (thisAuctionItem.highestBidPrice < thisAuctionItem.startingPrice){
             minimumBid = thisAuctionItem.startingPrice
             NewBidAmount_Input.placeholder = "New Bid (Minimum $\(minimumBid!)"
         }
@@ -78,25 +85,38 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
     @IBAction func Bid_Submit(_ sender: Any) {
         let thisAuctionItem:AuctionItem = (appdelegate.SelectedToViewAuctionItem)!
         let thisProductKey:String = appdelegate.SelectedToViewAuctionItem!.uniqueKey
+        if (NewBidAmount_Input.text ?? "" == "") {
+            let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid bid amount, the minimum bid amount for this item is $\(String(format: "%.2f", minimumBid!))", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
+            present(alert, animated: true, completion: nil)
+        }
+        else{
+            if (thisAuctionItem.highestBidPrice < thisAuctionItem.startingPrice){
+                if (Double(NewBidAmount_Input.text!)! >= thisAuctionItem.startingPrice){
+                    let ref = Database.database().reference()
+                    ref.child("Products/").child(thisProductKey).child("highestbidprice").setValue(NewBidAmount_Input.text!)
+                    ref.child("Products/").child(thisProductKey).child("highestbidder").setValue(appdelegate.SignedIn_UserName!)
+                }
+                else{
+                    let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid bid amount, the minimum bid amount for this item is $\(String(format: "%.2f", minimumBid!))", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
+                    present(alert, animated: true, completion: nil)
+                }
+            }
+            else{
+                if (Double(NewBidAmount_Input.text!)! > thisAuctionItem.highestBidPrice){
+                    let ref = Database.database().reference()
+                    ref.child("Products/").child(thisProductKey).child("highestbidprice").setValue(NewBidAmount_Input.text!)
+                    ref.child("Products/").child(thisProductKey).child("highestbidder").setValue(appdelegate.SignedIn_UserName!)
+                }
+                else{
+                    let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid bid amount, the minimum bid amount for this item is $\(String(format: "%.2f", minimumBid!+1))", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
+                    present(alert, animated: true, completion: nil)
+                }
+            }
+        }
         
-        if (Double(NewBidAmount_Input.text!)! >= thisAuctionItem.startingPrice){
-            let ref = Database.database().reference()
-            ref.child("Products/").child(thisProductKey).child("highestbidprice").setValue(NewBidAmount_Input.text!)
-        }
-        else if (Double(NewBidAmount_Input.text!)! >= thisAuctionItem.highestBidPrice){
-            let ref = Database.database().reference()
-            ref.child("Products/").child(thisProductKey).child("highestbidprice").setValue(NewBidAmount_Input.text!)
-        }
-        else if (NewBidAmount_Input.text == ""){
-            let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid bid amount, the minimum bid amount for this item is $\(String(format: "%.2f", minimumBid!))", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
-            present(alert, animated: true, completion: nil)
-        }
-        else {
-            let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid bid amount, the minimum bid amount for this item is $\(String(format: "%.2f", minimumBid!))", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
-            present(alert, animated: true, completion: nil)
-        }
     }
     
     

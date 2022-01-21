@@ -90,7 +90,7 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
                                                         opendate: formatter.date(from:pairs.value["opendate"] as! String)!,
                                                         closedate: formatter.date(from:pairs.value["closedate"] as! String)!,
                                                         startingprice: pairs.value["startingprice"] as! Double,
-                                                        highestbidprice: pairs.value["highestbidprice"] as! Double,
+                                                                   highestbidprice: Double("\(pairs.value["highestbidprice"]!)")!,
                                                         highestbidder: pairs.value["highestbidder"] as! String,
                                                         uniquekey: pairs.key),
                                             forKey: pairs.key)}
