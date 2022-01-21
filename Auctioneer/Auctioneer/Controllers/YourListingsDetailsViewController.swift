@@ -52,7 +52,7 @@ class YourListingsDetailsViewController : UIViewController,UITextFieldDelegate {
     @IBAction func Delete_Listing(_ sender: Any) {
         let auctionItemRef = Database.database().reference().child("Products").child("\((self.appdelegate.SelectedToViewAuctionItem?.uniqueKey)!)")
         auctionItemRef.removeValue()
-        self.tabBarController?.selectedIndex = 0
+        self.tabBarController?.selectedIndex = 2
     }
     
     
