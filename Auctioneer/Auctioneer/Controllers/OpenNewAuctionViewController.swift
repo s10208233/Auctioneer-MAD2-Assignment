@@ -212,6 +212,16 @@ class OpenNewAuctionViewController : UIViewController,
             let ref = Database.database().reference()
             ref.child("Products/").childByAutoId().setValue(["productname": ItemName_Input.text!,"imageurl": returnedImageUrl,"openby": appdelegate.SignedIn_UserName!,"opendate": formatter.string(from: Date()),"closedate":formatter.string(from:ClosingDate_Input.date),"startingprice":Double(StartingPrice_input.text!)!,"highestbidprice":0,"highestbidder":"-"])
             
+            ref.child("Users").observeSingleEvent(of: .value){
+                (snapshot) in
+                let users = snapshot.value as? [String:Dictionary<String, Any>]
+                users?.forEach{ pairs in
+                    if (pairs.value["Username"] as! String == self.appdelegate.SignedIn_UserName){
+                        ref.child("Users").child(pairs.key).updateChildValues(["ItemsAuctioned":pairs.value["ItemsAuctioned"] as! Int + 1])            
+                    }
+                }
+                
+            }
             self.tabBarController?.selectedIndex = 0
         }
         

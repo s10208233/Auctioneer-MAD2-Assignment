@@ -50,7 +50,7 @@ class SignUpViewController: UIViewController {
             }
             if (bool){
                 self.user = User(Username: self.newUsername.text!, Password: self.newPassword.text!)
-                ref.child("Users/").childByAutoId().setValue(["Username":self.newUsername.text!,"Password":self.newPassword.text!])
+                ref.child("Users/").childByAutoId().setValue(["Username":self.newUsername.text!,"Password":self.newPassword.text!,"ItemsAuctioned":0,"AuctionsWon":0,"ProfileImage":""])
                 //  Prompt users that login is sucessful and redirect to login page
                 let alert = UIAlertController(title: "Success", message: "Your account has been created! Login now to start using Auctioneer!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: {[weak alert] (_) in

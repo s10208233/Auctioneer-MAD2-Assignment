@@ -19,6 +19,17 @@ class AuctionWonViewController: UITableViewController {
         self.tableView.rowHeight = 75
         retrieveData()
 //        self.tableView.reloadData()
+        let ref = Database.database().reference()
+        ref.child("Users").observeSingleEvent(of: .value){
+            (snapshot) in
+            let users = snapshot.value as? [String:Dictionary<String, Any>]
+            users?.forEach{ pairs in
+                if (pairs.value["Username"] as! String == self.appDelegate.SignedIn_UserName){
+                    ref.child("Users").child(pairs.key).updateChildValues(["AuctionsWon": self.AuctionItemList.count])
+                }
+            }
+            
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

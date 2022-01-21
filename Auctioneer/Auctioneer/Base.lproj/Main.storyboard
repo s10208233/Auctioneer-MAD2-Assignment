@@ -1023,7 +1023,7 @@
         <!--Profile-->
         <scene sceneID="AcE-PX-OZS">
             <objects>
-                <viewController id="hK5-Rt-Il1" sceneMemberID="viewController">
+                <viewController id="hK5-Rt-Il1" customClass="ProfileViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PMr-GP-YU3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1051,6 +1051,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Change Profile Picture"/>
+                                <connections>
+                                    <action selector="ChangeProfileImage_Button:" destination="hK5-Rt-Il1" eventType="touchUpInside" id="WTP-Yy-zN4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYb-R3-S84">
                                 <rect key="frame" x="20" y="425.5" width="374" height="35.5"/>
@@ -1101,6 +1104,9 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
+                                <connections>
+                                    <action selector="SignOut_Button:" destination="hK5-Rt-Il1" eventType="touchUpInside" id="DKM-qd-ly8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="srq-Dm-G76"/>
@@ -1148,6 +1154,14 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Profile" id="7KM-p4-QSH"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="Earnings_Label" destination="7pC-SD-5Eg" id="WIb-QW-R2y"/>
+                        <outlet property="ItemsAuctioned_Label" destination="lYb-R3-S84" id="qs7-Oo-Hs1"/>
+                        <outlet property="ItemsWon_Label" destination="mId-qt-apK" id="y8c-d7-1RX"/>
+                        <outlet property="ProfileImage_ImageView" destination="Fb4-jj-yrp" id="4A1-lr-kO2"/>
+                        <outlet property="Spending_Label" destination="EGq-Iu-0XC" id="iRP-IA-V7j"/>
+                        <outlet property="Username_Label" destination="oug-tj-pia" id="7jt-bC-77B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6R-H6-cHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
