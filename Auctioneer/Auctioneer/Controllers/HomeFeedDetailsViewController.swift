@@ -41,8 +41,7 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMM y, h:mm a"
         ClosingDate_Label.text? = formatter.string(from: thisAuctionItem.closeDate)
-        ClosingDate_Label.text? = formatter.string(from: thisAuctionItem.openDate)
-        OpenedBy_Label.text = thisAuctionItem.openedBy
+        OpenDate_Label.text? = formatter.string(from: thisAuctionItem.openDate)
         
         auctionItemRef.observe(.value){ (snapshot) in
             let value = snapshot.value as? NSDictionary

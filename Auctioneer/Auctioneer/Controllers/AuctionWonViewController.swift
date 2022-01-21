@@ -35,6 +35,13 @@ class AuctionWonViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
+
+    @IBAction func pullDownRefresh(_ sender: UIRefreshControl) {
+        self.retrieveData()
+        self.tableView.reloadData()
+        self.tableView.refreshControl!.endRefreshing()
+    }
+
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
