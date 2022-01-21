@@ -18,7 +18,7 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        HomeFeedTableView.rowHeight = 445
+        HomeFeedTableView.rowHeight = 450
         HomeFeedTableView.delegate = self
         HomeFeedTableView.dataSource = self
         
