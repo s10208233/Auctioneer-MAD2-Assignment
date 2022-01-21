@@ -393,13 +393,13 @@
         <!--Listings-->
         <scene sceneID="Z0P-8p-ROs">
             <objects>
-                <tableViewController id="Pvt-ci-80S" sceneMemberID="viewController">
+                <tableViewController id="Pvt-ci-80S" customClass="YourListingViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6wu-Wd-VhJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="DE2-12-xqj" detailTextLabel="lug-0x-sOQ" imageView="taD-ee-HtH" rowHeight="98" style="IBUITableViewCellStyleSubtitle" id="QWF-pc-VqC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="YLCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="YLCell" textLabel="DE2-12-xqj" detailTextLabel="lug-0x-sOQ" imageView="taD-ee-HtH" rowHeight="98" style="IBUITableViewCellStyleSubtitle" id="QWF-pc-VqC">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QWF-pc-VqC" id="z5q-Gp-AjT">
@@ -446,7 +446,7 @@
         <!--Item Name-->
         <scene sceneID="Asn-XN-5aH">
             <objects>
-                <viewController id="z5k-7g-8Tz" sceneMemberID="viewController">
+                <viewController id="z5k-7g-8Tz" customClass="YourListingsDetailsViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uDC-Iy-S5p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -522,6 +522,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Delete">
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="Delete_Listing:" destination="z5k-7g-8Tz" eventType="touchUpInside" id="mes-3l-d95"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9W-cs-IzB">
                                 <rect key="frame" x="20" y="683.5" width="374" height="20.5"/>
@@ -572,6 +575,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Item Name" id="d1d-54-eLf"/>
+                    <connections>
+                        <outlet property="ClosingDate_Label" destination="G8W-9C-AXU" id="Ien-WT-jNR"/>
+                        <outlet property="HighestBidder_Label" destination="E4l-Xs-I5u" id="tbM-YY-aPu"/>
+                        <outlet property="HighestBiddingPrice_Label" destination="N9W-cs-IzB" id="N5M-wG-7kw"/>
+                        <outlet property="Item_CustomImageView" destination="3Y9-SC-HKq" id="24z-n0-xT1"/>
+                        <outlet property="OpenDate_Label" destination="7Dq-lu-8S9" id="Ef6-9a-dlf"/>
+                        <outlet property="StartingPrice_Label" destination="EbZ-7f-2CU" id="vbA-L3-CPa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbx-gS-CTq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -927,7 +938,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ja-KQ-QI9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="317.41071428571428"/>
+            <point key="canvasLocation" x="-68" y="265"/>
         </scene>
         <!--Open-->
         <scene sceneID="ZP7-dK-eN4">
@@ -958,13 +969,13 @@
         <!--Auctions Won-->
         <scene sceneID="J8D-30-K5a">
             <objects>
-                <tableViewController id="4pU-cJ-Qlb" sceneMemberID="viewController">
+                <tableViewController id="4pU-cJ-Qlb" customClass="AuctionWonViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4eg-sd-bwj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="5et-jx-e8Z" detailTextLabel="oCV-ew-iwW" imageView="Lqx-Yb-dgo" rowHeight="95" style="IBUITableViewCellStyleSubtitle" id="Jms-2n-Sfz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AWCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AWCell" textLabel="5et-jx-e8Z" detailTextLabel="oCV-ew-iwW" imageView="Lqx-Yb-dgo" rowHeight="95" style="IBUITableViewCellStyleSubtitle" id="Jms-2n-Sfz">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jms-2n-Sfz" id="3t0-hO-QAu">
@@ -1028,7 +1039,7 @@
         <!--Item Name-->
         <scene sceneID="rT9-O1-gG2">
             <objects>
-                <viewController id="E4e-uM-TCj" sceneMemberID="viewController">
+                <viewController id="E4e-uM-TCj" customClass="AuctionWonDetailsViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ben-zP-jeN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1105,6 +1116,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Item Name" id="TIz-cw-dhk"/>
+                    <connections>
+                        <outlet property="HighestBiddingPrice_Label" destination="xz3-vR-7sh" id="62s-dN-jJW"/>
+                        <outlet property="Item_CustomImageView" destination="yUp-Bn-iD3" id="oFl-3M-6VS"/>
+                        <outlet property="OpenDate_Label" destination="Lv2-ua-AmY" id="itn-1L-iHW"/>
+                        <outlet property="StartingPrice_Label" destination="vIF-x7-W34" id="c6e-Z0-Gkk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ixf-0b-1fm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

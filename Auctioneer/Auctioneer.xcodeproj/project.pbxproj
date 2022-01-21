@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0550BC0B27968F8A001C5BAA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550BC0A27968F89001C5BAA /* SignUpViewController.swift */; };
 		0575F0DE2796DD5B00865DD3 /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0575F0DD2796DD5B00865DD3 /* HomeFeedViewController.swift */; };
+		05904A58279AF3D00066D967 /* YourListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05904A57279AF3D00066D967 /* YourListingsViewController.swift */; };
+		05904A5A279B0D450066D967 /* AuctionWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05904A59279B0D450066D967 /* AuctionWonViewController.swift */; };
+		05904A5E279B1D200066D967 /* YourListingsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05904A5D279B1D200066D967 /* YourListingsDetailsViewController.swift */; };
+		05904A60279B23DA0066D967 /* AuctionWonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05904A5F279B23DA0066D967 /* AuctionWonDetailsViewController.swift */; };
 		628835DB279689C800031D9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835DA279689C800031D9A /* User.swift */; };
 		628835DD27968AF200031D9A /* AuctionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835DC27968AF200031D9A /* AuctionItem.swift */; };
 		628835EB279695E300031D9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628835EA279695E300031D9A /* LoginViewController.swift */; };
@@ -32,6 +36,10 @@
 /* Begin PBXFileReference section */
 		0550BC0A27968F89001C5BAA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0575F0DD2796DD5B00865DD3 /* HomeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
+		05904A57279AF3D00066D967 /* YourListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourListingsViewController.swift; sourceTree = "<group>"; };
+		05904A59279B0D450066D967 /* AuctionWonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionWonViewController.swift; sourceTree = "<group>"; };
+		05904A5D279B1D200066D967 /* YourListingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourListingsDetailsViewController.swift; sourceTree = "<group>"; };
+		05904A5F279B23DA0066D967 /* AuctionWonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionWonDetailsViewController.swift; sourceTree = "<group>"; };
 		17A73F031055A5BE54801A73 /* Pods-Auctioneer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.debug.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.debug.xcconfig"; sourceTree = "<group>"; };
 		44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Auctioneer.framework; path = "../../../Library/Developer/Xcode/DerivedData/Auctioneer-gkvoxnszrsdgrhbssoqqpzgylboi/Build/Products/Debug-iphoneos/Pods_Auctioneer.framework"; sourceTree = "<group>"; };
 		628835DA279689C800031D9A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -136,6 +144,10 @@
 				628835EC2796A07D00031D9A /* OpenNewAuctionViewController.swift */,
 				0575F0DD2796DD5B00865DD3 /* HomeFeedViewController.swift */,
 				628F69D4279A7BF9005066C5 /* HomeFeedDetailsViewController.swift */,
+				05904A57279AF3D00066D967 /* YourListingsViewController.swift */,
+				05904A59279B0D450066D967 /* AuctionWonViewController.swift */,
+				05904A5D279B1D200066D967 /* YourListingsDetailsViewController.swift */,
+				05904A5F279B23DA0066D967 /* AuctionWonDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -271,6 +283,9 @@
 				629AB1DB2789F0A800CFB7B0 /* Auctioneer.xcdatamodeld in Sources */,
 				629AB1D32789F0A800CFB7B0 /* SceneDelegate.swift in Sources */,
 				0550BC0B27968F8A001C5BAA /* SignUpViewController.swift in Sources */,
+				05904A60279B23DA0066D967 /* AuctionWonDetailsViewController.swift in Sources */,
+				05904A5E279B1D200066D967 /* YourListingsDetailsViewController.swift in Sources */,
+				05904A58279AF3D00066D967 /* YourListingsViewController.swift in Sources */,
 				628835DD27968AF200031D9A /* AuctionItem.swift in Sources */,
 				628835EB279695E300031D9A /* LoginViewController.swift in Sources */,
 				628F69D5279A7BF9005066C5 /* HomeFeedDetailsViewController.swift in Sources */,
@@ -279,6 +294,7 @@
 				628835DB279689C800031D9A /* User.swift in Sources */,
 				0575F0DE2796DD5B00865DD3 /* HomeFeedViewController.swift in Sources */,
 				62896F0527998195009AFDDD /* CustomImageView.swift in Sources */,
+				05904A5A279B0D450066D967 /* AuctionWonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,16 +48,19 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
             let value = snapshot.value as? NSDictionary
             self.HighestBidder_Label.text = "\(value?["highestbidder"] as! String)"
             self.HighestBiddingPrice_Label.text =  "$\(value?["highestbidprice"] as! Double)"
+            self.appdelegate.SelectedToViewAuctionItem?.highestBidPrice = value?["highestbidprice"] as! Double
+            
+            if (thisAuctionItem.highestBidPrice < thisAuctionItem.startingPrice){
+                self.minimumBid = thisAuctionItem.startingPrice
+                self.NewBidAmount_Input.placeholder = "New Bid (Minimum $\(self.minimumBid!)"
+            }
+            else{
+                self.minimumBid = thisAuctionItem.highestBidPrice
+                self.NewBidAmount_Input.placeholder = "New Bid (Minimum $\(self.minimumBid!))"
+            }
         }
     
-        if (thisAuctionItem.highestBidPrice < thisAuctionItem.startingPrice){
-            minimumBid = thisAuctionItem.startingPrice
-            NewBidAmount_Input.placeholder = "New Bid (Minimum $\(minimumBid!)"
-        }
-        else{
-            minimumBid = thisAuctionItem.highestBidPrice+1
-            NewBidAmount_Input.placeholder = "New Bid (Minimum $\(minimumBid!))"
-        }
+       
             
     }
     
@@ -85,7 +88,13 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
     @IBAction func Bid_Submit(_ sender: Any) {
         let thisAuctionItem:AuctionItem = (appdelegate.SelectedToViewAuctionItem)!
         let thisProductKey:String = appdelegate.SelectedToViewAuctionItem!.uniqueKey
-        if (NewBidAmount_Input.text ?? "" == "") {
+        
+        if (thisAuctionItem.openedBy == appdelegate.SignedIn_UserName!){
+            let alert = UIAlertController(title: "Bid Failed", message: "You cannot bid on a item that you opened", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
+            present(alert, animated: true, completion: nil)
+        }
+        else if (NewBidAmount_Input.text ?? "" == "") {
             let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid bid amount, the minimum bid amount for this item is $\(String(format: "%.2f", minimumBid!))", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
             present(alert, animated: true, completion: nil)
@@ -110,7 +119,7 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
                     ref.child("Products/").child(thisProductKey).child("highestbidder").setValue(appdelegate.SignedIn_UserName!)
                 }
                 else{
-                    let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid bid amount, the minimum bid amount for this item is $\(String(format: "%.2f", minimumBid!+1))", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid bid amount, your bid has to be above $\(String(format: "%.2f", minimumBid!))", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
                     present(alert, animated: true, completion: nil)
                 }

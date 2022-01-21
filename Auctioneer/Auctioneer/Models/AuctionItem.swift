@@ -17,9 +17,10 @@ class AuctionItem {
     var highestBidPrice:Double
     var highestBidder:String
     var uniqueKey:String
+    var isnotClosed:Bool
     
     init(productname:String,imageurl:String, openedby:String, opendate:Date, closedate:Date, startingprice:Double, highestbidprice:Double,
-         highestbidder:String, uniquekey:String){
+         highestbidder:String, uniquekey:String,isnotclosed:Bool){
         productName = productname
         imageUrl = imageurl
         openedBy = openedby
@@ -29,6 +30,7 @@ class AuctionItem {
         highestBidPrice = highestbidprice
         highestBidder = highestbidder
         uniqueKey = uniquekey
+        isnotClosed = isnotclosed
     }
     
 }

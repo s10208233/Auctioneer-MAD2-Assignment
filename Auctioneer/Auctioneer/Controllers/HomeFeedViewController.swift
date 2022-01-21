@@ -91,17 +91,28 @@ class HomeFeedViewController: UIViewController,  UITableViewDelegate, UITableVie
                                                         opendate: formatter.date(from:pairs.value["opendate"] as! String)!,
                                                         closedate: formatter.date(from:pairs.value["closedate"] as! String)!,
                                                         startingprice: pairs.value["startingprice"] as! Double,
-                                                                   highestbidprice: Double("\(pairs.value["highestbidprice"]!)")!,
+                                                        highestbidprice: Double("\(pairs.value["highestbidprice"]!)")!,
                                                         highestbidder: pairs.value["highestbidder"] as! String,
-                                                        uniquekey: pairs.key),
+                                                        uniquekey: pairs.key,
+                                                        isnotclosed: Date().isBetween(formatter.date(from:pairs.value["opendate"] as! String)!, and: formatter.date(from:pairs.value["closedate"] as! String)!)),
                                             forKey: pairs.key)}
                 
                 
                 for (key, value) in self.AuctionItemDictionary {
-                    self.AuctionItemList.append(AuctionItem(productname: value.productName, imageurl: value.imageUrl, openedby: value.openedBy, opendate: value.openDate, closedate: value.closeDate, startingprice: value.startingPrice, highestbidprice: value.highestBidPrice, highestbidder: value.highestBidder, uniquekey: value.uniqueKey))
+                    if (value.isnotClosed == true){
+                        self.AuctionItemList.append(AuctionItem(productname: value.productName, imageurl: value.imageUrl, openedby: value.openedBy, opendate: value.openDate, closedate: value.closeDate, startingprice: value.startingPrice, highestbidprice: value.highestBidPrice, highestbidder: value.highestBidder, uniquekey: value.uniqueKey, isnotclosed: value.isnotClosed))
+                    }
+                    
                 }
                 self.HomeFeedTableView.reloadData()
                
                 }
             }
+    
+        
+}
+extension Date {
+    func isBetween(_ date1: Date, and date2: Date) -> Bool {
+        return (min(date1, date2) ... max(date1, date2)).contains(self)
+    }
 }
