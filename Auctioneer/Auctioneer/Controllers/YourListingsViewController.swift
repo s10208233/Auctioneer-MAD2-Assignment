@@ -57,6 +57,7 @@ class YourListingViewController: UIViewController, UITableViewDelegate, UITableV
             }
             if (AuctionItem.isnotClosed == true){
                 cell.Cell_Status.text? = "Open"
+                cell.Cell_Status.textColor = .systemGreen
             }
             else{
                 cell.Cell_Status.text? = "Closed"
