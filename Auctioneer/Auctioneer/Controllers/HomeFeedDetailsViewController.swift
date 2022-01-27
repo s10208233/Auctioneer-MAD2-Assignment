@@ -52,7 +52,6 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
             self.HighestBidder_Label.text = "\(value?["highestbidder"] as! String)"
             self.HighestBiddingPrice_Label.text =  "$\(value?["highestbidprice"] as! Double)"
             self.appdelegate.SelectedToViewAuctionItem?.highestBidPrice = value?["highestbidprice"] as! Double
-            
             if (thisAuctionItem.highestBidPrice < thisAuctionItem.startingPrice){
                 self.minimumBid = thisAuctionItem.startingPrice
                 self.NewBidAmount_Input.placeholder = "New Bid (Minimum $\(self.minimumBid!))"
@@ -89,6 +88,8 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
     
     //  New Bid
     @IBAction func Bid_Submit(_ sender: Any) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMM y, h:mm a"
         let thisAuctionItem:AuctionItem = (appdelegate.SelectedToViewAuctionItem)!
         let thisProductKey:String = appdelegate.SelectedToViewAuctionItem!.uniqueKey
         
@@ -99,6 +100,11 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
         }
         else if (NewBidAmount_Input.text ?? "" == "") {
             let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid bid amount, the minimum bid amount for this item is $\(String(format: "%.2f", minimumBid!))", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
+            present(alert, animated: true, completion: nil)
+        }
+        else if (Date().isBetween(thisAuctionItem.openDate, and: thisAuctionItem.closeDate) == false){
+            let alert = UIAlertController(title: "Bid Failed", message: "This item has been closed", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in }))
             present(alert, animated: true, completion: nil)
         }
