@@ -60,14 +60,14 @@ class AuctionWonViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell {
-            let cell = AuctionWonTableView.dequeueReusableCell(withIdentifier: "CustomAWCell") as! CustomYLCell
+            let cell = AuctionWonTableView.dequeueReusableCell(withIdentifier: "CustomAWCell") as! CustomAWCell
             let AuctionItem = AuctionItemList[indexPath.row]
             
-            cell.Cell_ProductNameLabel!.text = AuctionItem.productName
+            cell.Cell_ProductName_Label!.text = AuctionItem.productName
             if let url = URL(string: AuctionItem.imageUrl){
                 cell.Cell_ImageView.loadImage(from: url)
             }
-            cell.Cell_HighestBid_Label!.text = "$\(AuctionItem.highestBidPrice)"
+            cell.Cell_WonAt_Label!.text = "$\(AuctionItem.highestBidPrice)"
         return cell
         
     }
