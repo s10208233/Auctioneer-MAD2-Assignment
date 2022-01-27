@@ -55,7 +55,7 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
             
             if (thisAuctionItem.highestBidPrice < thisAuctionItem.startingPrice){
                 self.minimumBid = thisAuctionItem.startingPrice
-                self.NewBidAmount_Input.placeholder = "New Bid (Minimum $\(self.minimumBid!)"
+                self.NewBidAmount_Input.placeholder = "New Bid (Minimum $\(self.minimumBid!))"
             }
             else{
                 self.minimumBid = thisAuctionItem.highestBidPrice

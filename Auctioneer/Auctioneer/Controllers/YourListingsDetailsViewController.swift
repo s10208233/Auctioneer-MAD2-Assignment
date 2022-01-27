@@ -41,7 +41,7 @@ class YourListingsDetailsViewController : UIViewController,UITextFieldDelegate {
         
         auctionItemRef.observeSingleEvent(of: .value){ (snapshot) in
             let value = snapshot.value as? NSDictionary
-            self.HighestBidder_Label.text = "$\(value?["highestbidder"] as! String)"
+            self.HighestBidder_Label.text = "\(value?["highestbidder"] as! String)"
             self.HighestBiddingPrice_Label.text =  "$\(value?["highestbidprice"] as! Double)"
             self.appdelegate.SelectedToViewAuctionItem?.highestBidPrice = value?["highestbidprice"] as! Double
             
