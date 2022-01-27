@@ -394,7 +394,6 @@
         <!--Your Listings-->
         <scene sceneID="ej3-hm-5NO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mlc-lM-fuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="R8U-PI-FVb" customClass="YourListingViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iSM-pu-1aq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -498,6 +497,7 @@
                         <outlet property="YourListingTableView" destination="e7P-xw-8rZ" id="FOa-Y5-sZp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mlc-lM-fuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5862.3188405797109" y="802.90178571428567"/>
         </scene>
@@ -836,8 +836,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C6j-IO-PCF">
-                                <rect key="frame" x="20" y="161" width="374" height="259"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C6j-IO-PCF">
+                                <rect key="frame" x="0.0" y="161" width="414" height="259"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="261.5" id="Caw-eH-ZfI"/>
@@ -904,7 +904,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="C6j-IO-PCF" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="0iJ-Ae-Ng8"/>
+                            <constraint firstItem="C6j-IO-PCF" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" id="0iJ-Ae-Ng8"/>
                             <constraint firstItem="DeN-f4-hms" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="AEi-Tt-pEG"/>
                             <constraint firstItem="5rt-ja-yuy" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="FbF-Wa-F9F"/>
                             <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="Ory-3B-fna" secondAttribute="trailing" constant="20" id="GIo-SA-u82"/>
@@ -927,7 +927,7 @@
                             <constraint firstItem="swE-ie-cZo" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="10" id="tcl-Ca-08W"/>
                             <constraint firstItem="nXg-MH-rxt" firstAttribute="leading" secondItem="mR8-cb-S0T" secondAttribute="leading" constant="20" id="uFR-yk-W5i"/>
                             <constraint firstItem="C6j-IO-PCF" firstAttribute="top" secondItem="mR8-cb-S0T" secondAttribute="top" constant="20" id="y9p-8Q-Rud"/>
-                            <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="C6j-IO-PCF" secondAttribute="trailing" constant="20" id="yer-DK-zKY"/>
+                            <constraint firstItem="mR8-cb-S0T" firstAttribute="trailing" secondItem="C6j-IO-PCF" secondAttribute="trailing" id="yer-DK-zKY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Auction an item" id="yIe-Yn-bnT"/>
@@ -1308,7 +1308,6 @@
         <!--Auctions Won-->
         <scene sceneID="2d3-at-Yzs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FPM-zt-Gwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="pAf-mI-uvg" customClass="AuctionWonViewController" customModule="Auctioneer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O8d-qO-zXz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1402,6 +1401,7 @@
                         <outlet property="AuctionWonTableView" destination="506-rb-UGQ" id="Hnb-us-jqy"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPM-zt-Gwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5860.8695652173919" y="1488.6160714285713"/>
         </scene>
@@ -1412,7 +1412,7 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="key.fill" catalog="system" width="83" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
