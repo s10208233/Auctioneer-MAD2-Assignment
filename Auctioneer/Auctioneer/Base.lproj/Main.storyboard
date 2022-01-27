@@ -1039,7 +1039,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oug-tj-pia">
-                                <rect key="frame" x="20" y="400" width="374" height="50.5"/>
+                                <rect key="frame" x="20" y="390" width="374" height="50.5"/>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1053,36 +1053,36 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mId-qt-apK">
-                                <rect key="frame" x="20" y="543" width="374" height="35.5"/>
+                                <rect key="frame" x="20" y="528" width="374" height="35.5"/>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-G4-VeM">
-                                <rect key="frame" x="20" y="583.5" width="374" height="17"/>
+                                <rect key="frame" x="20" y="568.5" width="374" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earnings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="593-4G-zlC">
-                                <rect key="frame" x="20" y="656" width="374" height="17"/>
+                                <rect key="frame" x="20" y="641" width="374" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pC-SD-5Eg">
-                                <rect key="frame" x="20" y="615.5" width="374" height="35.5"/>
+                                <rect key="frame" x="20" y="600.5" width="374" height="35.5"/>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="28"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGq-Iu-0XC">
-                                <rect key="frame" x="20" y="688" width="374" height="35.5"/>
+                                <rect key="frame" x="20" y="673" width="374" height="35.5"/>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="28"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaa-KY-5ks">
-                                <rect key="frame" x="20" y="770.5" width="374" height="40"/>
+                                <rect key="frame" x="20" y="755.5" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3Bj-ic-8CB"/>
                                 </constraints>
@@ -1095,18 +1095,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items auctioned" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2x-Rp-pdr">
-                                <rect key="frame" x="20" y="511" width="374" height="17"/>
+                                <rect key="frame" x="20" y="496" width="374" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYb-R3-S84">
-                                <rect key="frame" x="20" y="470.5" width="374" height="35.5"/>
+                                <rect key="frame" x="20" y="455.5" width="374" height="35.5"/>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYT-mb-sSg">
-                                <rect key="frame" x="20" y="728.5" width="374" height="17"/>
+                                <rect key="frame" x="20" y="713.5" width="374" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1120,14 +1120,14 @@
                             <constraint firstItem="srq-Dm-G76" firstAttribute="trailing" secondItem="FjB-NY-j18" secondAttribute="trailing" constant="20" id="4Wj-HG-ngK"/>
                             <constraint firstItem="Gaa-KY-5ks" firstAttribute="leading" secondItem="srq-Dm-G76" secondAttribute="leading" constant="20" id="6VW-8U-ykf"/>
                             <constraint firstItem="FjB-NY-j18" firstAttribute="leading" secondItem="srq-Dm-G76" secondAttribute="leading" constant="20" id="8yl-oh-NBX"/>
-                            <constraint firstItem="oug-tj-pia" firstAttribute="top" secondItem="FjB-NY-j18" secondAttribute="bottom" constant="25" id="G4f-gG-YGd"/>
+                            <constraint firstItem="oug-tj-pia" firstAttribute="top" secondItem="FjB-NY-j18" secondAttribute="bottom" constant="15" id="G4f-gG-YGd"/>
                             <constraint firstItem="srq-Dm-G76" firstAttribute="trailing" secondItem="EGq-Iu-0XC" secondAttribute="trailing" constant="20" id="HTS-0c-876"/>
                             <constraint firstItem="srq-Dm-G76" firstAttribute="trailing" secondItem="Fb4-jj-yrp" secondAttribute="trailing" id="IKn-ku-0eA"/>
                             <constraint firstItem="srq-Dm-G76" firstAttribute="trailing" secondItem="lYb-R3-S84" secondAttribute="trailing" constant="20" id="JnX-fO-cCe"/>
                             <constraint firstItem="Fb4-jj-yrp" firstAttribute="top" secondItem="srq-Dm-G76" secondAttribute="top" id="Kb4-QX-J8K"/>
                             <constraint firstItem="FjB-NY-j18" firstAttribute="top" secondItem="Fb4-jj-yrp" secondAttribute="bottom" constant="10" id="M6o-DM-4lx"/>
                             <constraint firstItem="srq-Dm-G76" firstAttribute="trailing" secondItem="W2x-Rp-pdr" secondAttribute="trailing" constant="20" id="MY3-eb-4aP"/>
-                            <constraint firstItem="lYb-R3-S84" firstAttribute="top" secondItem="oug-tj-pia" secondAttribute="bottom" constant="20" id="MkC-hq-cpV"/>
+                            <constraint firstItem="lYb-R3-S84" firstAttribute="top" secondItem="oug-tj-pia" secondAttribute="bottom" constant="15" id="MkC-hq-cpV"/>
                             <constraint firstAttribute="trailing" secondItem="mId-qt-apK" secondAttribute="trailing" constant="20" id="NHX-hd-DbM"/>
                             <constraint firstItem="ZYT-mb-sSg" firstAttribute="top" secondItem="EGq-Iu-0XC" secondAttribute="bottom" constant="5" id="OYU-bE-vzT"/>
                             <constraint firstItem="srq-Dm-G76" firstAttribute="trailing" secondItem="7pC-SD-5Eg" secondAttribute="trailing" constant="20" id="Z8f-1Q-ttT"/>
