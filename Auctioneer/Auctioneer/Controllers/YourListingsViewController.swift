@@ -61,7 +61,7 @@ class YourListingViewController: UIViewController, UITableViewDelegate, UITableV
             else{
                 cell.Cell_Status.text? = "Closed"
             }
-            cell.Cell_HighestBid_Label.text? = "\(AuctionItem.highestBidPrice)"
+            cell.Cell_HighestBid_Label.text? = "$\(AuctionItem.highestBidPrice)"
         return cell
         
     }

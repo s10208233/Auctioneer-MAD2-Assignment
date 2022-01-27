@@ -36,7 +36,7 @@ class AuctionWonDetailsViewController : UIViewController,UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMM y, h:mm a"
         OpenDate_Label.text? = formatter.string(from: thisAuctionItem.openDate)
-        StartingPrice_Label.text! = "\(thisAuctionItem.startingPrice as! Double)"
+        StartingPrice_Label.text! = "$\(thisAuctionItem.startingPrice as! Double)"
         HighestBiddingPrice_Label.text =  "$\(thisAuctionItem.highestBidPrice as! Double)"
         
 
