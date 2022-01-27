@@ -57,11 +57,9 @@ class YourListingViewController: UIViewController, UITableViewDelegate, UITableV
             }
             if (AuctionItem.isnotClosed == true){
                 cell.Cell_Status.text? = "Open"
-                cell.Cell_Status.textColor = .systemGreen
             }
             else{
                 cell.Cell_Status.text? = "Closed"
-                cell.Cell_Status.textColor = .red
             }
             cell.Cell_HighestBid_Label.text? = "\(AuctionItem.highestBidPrice)"
         return cell
