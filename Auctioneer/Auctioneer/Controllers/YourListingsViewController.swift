@@ -9,61 +9,71 @@ import Foundation
 import UIKit
 import Firebase
 
-class YourListingViewController: UITableViewController {
-    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+class YourListingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+    let appdelegate = (UIApplication.shared.delegate) as! AppDelegate
+    
+    @IBOutlet weak var YourListingTableView: UITableView!
     var AuctionItemDictionary:[String:AuctionItem] = [:]
     var AuctionItemList:[AuctionItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 75
+        YourListingTableView.rowHeight = 125
+        YourListingTableView.delegate = self
+        YourListingTableView.dataSource = self
         retrieveData()
+        
+        //  Implement Refresh Control
+        YourListingTableView.refreshControl?.tintColor  = .white
+        YourListingTableView.refreshControl = UIRefreshControl()
+        YourListingTableView.refreshControl?.attributedTitle = NSAttributedString(string: "Refreshing...")
+        YourListingTableView.refreshControl?.addTarget(self, action: #selector(self.pullDownRefresh(_:)), for: .valueChanged)
         
 //        self.tableView.reloadData()
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.tableView.reloadData()
+        YourListingTableView.reloadData()
     }
     
-    @IBAction func pullDownRefresh(_ sender: UIRefreshControl) {
+    //  Drag down top to refresh
+    @objc func pullDownRefresh(_ sender: AnyObject){
         retrieveData()
-        self.tableView.reloadData()
-        self.tableView.refreshControl!.endRefreshing()
+        self.YourListingTableView.reloadData()
+        self.YourListingTableView.refreshControl!.endRefreshing()
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AuctionItemList.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
-        UITableViewCell { 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
+        UITableViewCell {
+            let cell = YourListingTableView.dequeueReusableCell(withIdentifier: "CustomYLCell") as! CustomYLCell
             let AuctionItem = AuctionItemList[indexPath.row]
-            let cell = self.tableView.dequeueReusableCell(withIdentifier: "YLCell", for: indexPath)
-            let image = cell.imageView as? CustomImageView
+            
+            cell.Cell_ProductNameLabel!.text = AuctionItem.productName
             if let url = URL(string: AuctionItem.imageUrl){
-                image?.loadImage(from: url)
+                cell.Cell_ImageView.loadImage(from: url)
             }
             if (AuctionItem.isnotClosed == true){
-                cell.detailTextLabel!.text = "Open"
+                cell.Cell_Status.text? = "Open"
             }
             else{
-                cell.detailTextLabel!.text = "Closed \(AuctionItem.highestBidder) " + "\(AuctionItem.openedBy)"
+                cell.Cell_Status.text? = "Closed"
+                cell.Cell_Status.textColor = .red
             }
-            cell.textLabel!.text = AuctionItem.productName
+            cell.Cell_HighestBid_Label.text? = "\(AuctionItem.highestBidPrice)"
         return cell
         
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
             return true
     }
     
     //  Update Selected Auction Item in Appdelegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        appDelegate.SelectedToViewAuctionItem = AuctionItemList[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        appdelegate.SelectedToViewAuctionItem = AuctionItemList[indexPath.row]
     }
 
     
@@ -91,11 +101,11 @@ class YourListingViewController: UITableViewController {
                 
                 
                 for (key, value) in self.AuctionItemDictionary {
-                    if (value.openedBy == self.appDelegate.SignedIn_UserName!){
+                    if (value.openedBy == self.appdelegate.SignedIn_UserName!){
                         self.AuctionItemList.append(AuctionItem(productname: value.productName, imageurl: value.imageUrl, openedby: value.openedBy, opendate: value.openDate, closedate: value.closeDate, startingprice: value.startingPrice, highestbidprice: value.highestBidPrice, highestbidder: value.highestBidder, uniquekey: value.uniqueKey,isnotclosed: value.isnotClosed))
                     }
                 }
-                self.tableView.reloadData()
+                self.YourListingTableView.reloadData()
                 }
             }
 

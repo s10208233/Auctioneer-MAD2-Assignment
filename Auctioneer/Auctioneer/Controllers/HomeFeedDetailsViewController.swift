@@ -31,6 +31,7 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
         NewBidAmount_Input.delegate = self
         NewBidAmount_Input.keyboardType = .decimalPad
         
+        //  Build Product Details
         let thisAuctionItem:AuctionItem = (appdelegate.SelectedToViewAuctionItem)!
         let auctionItemRef = Database.database().reference().child("Products").child("\((self.appdelegate.SelectedToViewAuctionItem?.uniqueKey)!)")
         title = thisAuctionItem.productName
@@ -42,7 +43,10 @@ class HomeFeedDetailsViewController : UIViewController,UITextFieldDelegate {
         formatter.dateFormat = "d MMM y, h:mm a"
         ClosingDate_Label.text? = formatter.string(from: thisAuctionItem.closeDate)
         OpenDate_Label.text? = formatter.string(from: thisAuctionItem.openDate)
+        OpenedBy_Label.text? = thisAuctionItem.openedBy
         
+        
+        //  Live Price Update
         auctionItemRef.observe(.value){ (snapshot) in
             let value = snapshot.value as? NSDictionary
             self.HighestBidder_Label.text = "\(value?["highestbidder"] as! String)"

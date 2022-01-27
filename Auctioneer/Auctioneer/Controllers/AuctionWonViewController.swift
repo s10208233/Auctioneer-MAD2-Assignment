@@ -9,22 +9,33 @@ import Foundation
 import UIKit
 import Firebase
 
-class AuctionWonViewController: UITableViewController {
-    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+class AuctionWonViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let appdelegate = (UIApplication.shared.delegate) as! AppDelegate
+    
+    @IBOutlet weak var AuctionWonTableView: UITableView!
     var AuctionItemDictionary:[String:AuctionItem] = [:]
     var AuctionItemList:[AuctionItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 75
+        AuctionWonTableView.rowHeight = 125
+        AuctionWonTableView.delegate = self
+        AuctionWonTableView.dataSource = self
         retrieveData()
-//        self.tableView.reloadData()
+        
+        //  Implement Refresh Control
+        AuctionWonTableView.refreshControl?.tintColor  = .white
+        AuctionWonTableView.refreshControl = UIRefreshControl()
+        AuctionWonTableView.refreshControl?.attributedTitle = NSAttributedString(string: "Refreshing...")
+        AuctionWonTableView.refreshControl?.addTarget(self, action: #selector(self.pullDownRefresh(_:)), for: .valueChanged)
+        
+        //  Observer
         let ref = Database.database().reference()
         ref.child("Users").observeSingleEvent(of: .value){
             (snapshot) in
             let users = snapshot.value as? [String:Dictionary<String, Any>]
             users?.forEach{ pairs in
-                if (pairs.value["Username"] as! String == self.appDelegate.SignedIn_UserName){
+                if (pairs.value["Username"] as! String == self.appdelegate.SignedIn_UserName){
                     ref.child("Users").child(pairs.key).updateChildValues(["AuctionsWon": self.AuctionItemList.count])
                 }
             }
@@ -33,44 +44,41 @@ class AuctionWonViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.tableView.reloadData()
+        AuctionWonTableView.reloadData()
     }
 
-    @IBAction func pullDownRefresh(_ sender: UIRefreshControl) {
-        self.retrieveData()
-        self.tableView.reloadData()
-        self.tableView.refreshControl!.endRefreshing()
+    //  Drag down top to refresh
+    @objc func pullDownRefresh(_ sender: AnyObject){
+        retrieveData()
+        AuctionWonTableView.reloadData()
+        AuctionWonTableView.refreshControl!.endRefreshing()
     }
 
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AuctionItemList.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell {
+            let cell = AuctionWonTableView.dequeueReusableCell(withIdentifier: "CustomAWCell") as! CustomYLCell
             let AuctionItem = AuctionItemList[indexPath.row]
-            let cell = self.tableView.dequeueReusableCell(withIdentifier: "AWCell", for: indexPath)
-            let image = cell.imageView as? CustomImageView
+            
+            cell.Cell_ProductNameLabel!.text = AuctionItem.productName
             if let url = URL(string: AuctionItem.imageUrl){
-                image?.loadImage(from: url)
+                cell.Cell_ImageView.loadImage(from: url)
             }
-            cell.textLabel!.text = AuctionItem.productName
-            cell.detailTextLabel!.text = "Starting at $\(AuctionItem.startingPrice), " + "Won at $\(AuctionItem.highestBidPrice)"
+            cell.Cell_HighestBid_Label!.text = "$\(AuctionItem.highestBidPrice)"
         return cell
         
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
             return true
     }
     
     //  Update Selected Auction Item in Appdelegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        appDelegate.SelectedToViewAuctionItem = AuctionItemList[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        appdelegate.SelectedToViewAuctionItem = AuctionItemList[indexPath.row]
     }
     
     //  DATA
@@ -97,11 +105,11 @@ class AuctionWonViewController: UITableViewController {
                 
                 
                 for (key, value) in self.AuctionItemDictionary {
-                    if (value.highestBidder == self.appDelegate.SignedIn_UserName! && value.isnotClosed == false){
+                    if (value.highestBidder == self.appdelegate.SignedIn_UserName! && value.isnotClosed == false){
                         self.AuctionItemList.append(AuctionItem(productname: value.productName, imageurl: value.imageUrl, openedby: value.openedBy, opendate: value.openDate, closedate: value.closeDate, startingprice: value.startingPrice, highestbidprice: value.highestBidPrice, highestbidder: value.highestBidder, uniquekey: value.uniqueKey,isnotclosed: value.isnotClosed))
                     }
                 }
-                self.tableView.reloadData()
+                self.AuctionWonTableView.reloadData()
                 }
             }
 

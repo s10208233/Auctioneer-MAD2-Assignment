@@ -30,6 +30,8 @@
 		629AB1DB2789F0A800CFB7B0 /* Auctioneer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 629AB1D92789F0A800CFB7B0 /* Auctioneer.xcdatamodeld */; };
 		629AB1DD2789F0A900CFB7B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629AB1DC2789F0A900CFB7B0 /* Assets.xcassets */; };
 		629AB1E02789F0A900CFB7B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629AB1DE2789F0A900CFB7B0 /* LaunchScreen.storyboard */; };
+		62DB14B727A2E408002C168E /* CustomYLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB14B627A2E408002C168E /* CustomYLCell.swift */; };
+		62DB14B927A2E415002C168E /* CustomAWCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB14B827A2E415002C168E /* CustomAWCell.swift */; };
 		90DA6D55D83881A1B546BB4F /* Pods_Auctioneer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44017C364C40E42085D3E1F1 /* Pods_Auctioneer.framework */; };
 		DD938E7368CC711C68650C82 /* Pods_Auctioneer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39A51CD36C0D557E6AA9A58 /* Pods_Auctioneer.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		629AB1DC2789F0A900CFB7B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		629AB1DF2789F0A900CFB7B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		629AB1E12789F0A900CFB7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62DB14B627A2E408002C168E /* CustomYLCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomYLCell.swift; sourceTree = "<group>"; };
+		62DB14B827A2E415002C168E /* CustomAWCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAWCell.swift; sourceTree = "<group>"; };
 		B39A51CD36C0D557E6AA9A58 /* Pods_Auctioneer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auctioneer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5901F2445564E20E96F313 /* Pods-Auctioneer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auctioneer.release.xcconfig"; path = "Target Support Files/Pods-Auctioneer/Pods-Auctioneer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +118,10 @@
 				629AB1E92789F2E800CFB7B0 /* Models */,
 				629AB1D02789F0A800CFB7B0 /* AppDelegate.swift */,
 				629AB1D22789F0A800CFB7B0 /* SceneDelegate.swift */,
+				62896F0427998195009AFDDD /* CustomImageView.swift */,
+				62896F022799647B009AFDDD /* HomeFeedCustomCell.swift */,
+				62DB14B627A2E408002C168E /* CustomYLCell.swift */,
+				62DB14B827A2E415002C168E /* CustomAWCell.swift */,
 				629AB1DE2789F0A900CFB7B0 /* LaunchScreen.storyboard */,
 				629AB1D62789F0A800CFB7B0 /* Main.storyboard */,
 				629AB1D92789F0A800CFB7B0 /* Auctioneer.xcdatamodeld */,
@@ -121,8 +129,6 @@
 				629AB1E12789F0A900CFB7B0 /* Info.plist */,
 				628835F32796BADB00031D9A /* MainDAL.swift */,
 				628835F52796D31100031D9A /* GoogleService-Info.plist */,
-				62896F022799647B009AFDDD /* HomeFeedCustomCell.swift */,
-				62896F0427998195009AFDDD /* CustomImageView.swift */,
 			);
 			path = Auctioneer;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				629AB1D52789F0A800CFB7B0 /* ViewController.swift in Sources */,
+				62DB14B727A2E408002C168E /* CustomYLCell.swift in Sources */,
 				629AB1D12789F0A800CFB7B0 /* AppDelegate.swift in Sources */,
 				628835ED2796A07D00031D9A /* OpenNewAuctionViewController.swift in Sources */,
 				629AB1DB2789F0A800CFB7B0 /* Auctioneer.xcdatamodeld in Sources */,
@@ -293,6 +300,7 @@
 				628835DD27968AF200031D9A /* AuctionItem.swift in Sources */,
 				628835EB279695E300031D9A /* LoginViewController.swift in Sources */,
 				628F69D5279A7BF9005066C5 /* HomeFeedDetailsViewController.swift in Sources */,
+				62DB14B927A2E415002C168E /* CustomAWCell.swift in Sources */,
 				62896F032799647B009AFDDD /* HomeFeedCustomCell.swift in Sources */,
 				628835F42796BADB00031D9A /* MainDAL.swift in Sources */,
 				628835DB279689C800031D9A /* User.swift in Sources */,

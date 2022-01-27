@@ -42,7 +42,9 @@ class ProfileViewController:UIViewController,UIImagePickerControllerDelegate,UIN
         present(vc, animated: true)
     }
     @IBAction func SignOut_Button(_ sender: Any) {
-        self.dismiss(animated: true)
+        self.dismiss(animated: true) {
+            self.dismiss(animated: true)
+        }
     }
     
     //  DATA
