@@ -17,7 +17,8 @@ class AuctionWonDetailsViewController : UIViewController,UITextFieldDelegate {
     @IBOutlet weak var OpenDate_Label: UILabel!
     @IBOutlet weak var StartingPrice_Label: UILabel!
     @IBOutlet weak var HighestBiddingPrice_Label: UILabel!
-    
+    @IBOutlet weak var CloseDate_Label: UILabel!
+    @IBOutlet weak var OpenedBy_Label: UILabel!
     
     
     
@@ -38,6 +39,8 @@ class AuctionWonDetailsViewController : UIViewController,UITextFieldDelegate {
         OpenDate_Label.text? = formatter.string(from: thisAuctionItem.openDate)
         StartingPrice_Label.text! = "$\(thisAuctionItem.startingPrice as! Double)"
         HighestBiddingPrice_Label.text =  "$\(thisAuctionItem.highestBidPrice as! Double)"
+        OpenedBy_Label.text = "\(thisAuctionItem.openedBy as! String)"
+        CloseDate_Label.text = formatter.string(from: thisAuctionItem.closeDate)
         
 
     }
