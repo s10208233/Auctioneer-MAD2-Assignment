@@ -3,4 +3,5 @@
 ## Description
 This is an assignment for the module Mobile Application Development 2 (iOS).
 
-Auctioneer is an 
+##### App Name
+- Auctioneer
